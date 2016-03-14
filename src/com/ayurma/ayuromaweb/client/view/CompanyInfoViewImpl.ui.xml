@@ -1,0 +1,130 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style type='com.ayurma.ayuromaweb.client.view.CompanyInfoViewImpl.MyStyle'>
+	.rootPanel{
+	       font-family:arial;
+	       padding:10px;
+	
+	    }
+	    .mainHeading{
+	       font-weight:bold;
+	       font-size:20pt;
+	       padding:5px 0;
+	       color:#111;
+	    }
+	    .leftPanel{
+           float:left;
+           width:580px;	
+           padding:10px;
+	
+	    }
+	    .rightPanel{
+	       float:right;
+	       width:325px;
+	       border-left:1px solid #ccc;
+	       padding:10px;
+	
+	    }
+	    .clear{
+	
+	       clear:both;
+	    }
+      .companyName{
+           font-weight:bold;
+           font-size:14pt;
+           color: #1f81c7;
+          
+           padding:5px 0;
+           margin-bottom:10px;
+    
+        }
+       .companyAddress{
+          
+           font-size:12pt;
+           color: #555;
+           margin-bottom:10px;
+             
+        }
+	    /* contact us text*/
+       .heading1{
+           font-weight:bold;
+           font-size:16pt;
+           padding:5px 0;
+           margin-bottom:10px;
+            color: rgb(60,133,202);
+    
+       }
+       
+        .heading2{
+           font-weight:bold;
+           font-size:12pt;
+           color: rgb(60,133,202);
+           margin-bottom:10px;
+    
+        }
+	    .textType1{
+	       color:#555;
+	     }
+		.phoneNumber{
+			color:#555;
+		}
+	    .textType2{
+           font-weight:bold;
+           font-size:11pt;
+           color: #111;
+           letter-spacing:0.1pt;
+          
+              
+        
+        }
+        .container1{
+            margin-bottom:20px;
+        
+        }		
+	</ui:style>
+	<g:HTMLPanel>
+
+	       <div class="{style.heading1}">Contact Us</div>
+	       <!--  company name -->
+	       <g:Label styleName="{style.companyName}">Ayuroma Centre Pvt. Ltd,</g:Label>
+	       <!-- Kanpur Office Address-->
+	       <g:Label ui:field='lblCompanyHead' styleName="{style.textType2}"></g:Label>
+	       <g:HTMLPanel ui:field='addressPanel' styleName="{style.companyAddress}">
+	              <!-- 
+	           <div class="{style.companyAddress}">116/317, Adarshnagar<br/>
+                    Rawatpur gaon<br/>
+                    Kanpur 208019<br/>
+                    India<br/>
+               </div>
+  				-->
+	       </g:HTMLPanel>
+	           <!-- phone -->
+               <g:Label styleName="{style.heading2}">Phone:</g:Label>
+               <g:HTMLPanel ui:field='phonesPanel' styleName="{style.container1}">
+                     <!-- 
+              	 <div class="{style.textType1}">(0512)2500206</div>
+               -->
+              
+               </g:HTMLPanel>
+	           <!-- mobile -->
+	           <g:Label styleName="{style.heading2}">Mobile:</g:Label>
+	           <g:HTMLPanel ui:field='mobilesPanel' styleName="{style.container1}">
+	                 <!-- 
+	           <div class="{style.textType1}">+91 9415050346</div>
+	           <div class="{style.textType1}">+91 9651712468</div>
+	           <div class="{style.textType1}">+91 9335662851</div>
+	           -->
+               </g:HTMLPanel>
+	       <!-- Emails -->
+	       <g:Label  styleName="{style.heading2}">Emails:</g:Label>
+	       <g:HTMLPanel ui:field='emailsPanel' styleName="{style.container1}">
+	           <!-- 
+	           <div class="{style.textType1}">ayuroma07@gmail.com</div>
+               <div class="{style.textType1}">ayuroma07@rediffmail.com</div>
+	    		 -->
+	       </g:HTMLPanel>
+	  
+	   
+	</g:HTMLPanel>
+</ui:UiBinder> 

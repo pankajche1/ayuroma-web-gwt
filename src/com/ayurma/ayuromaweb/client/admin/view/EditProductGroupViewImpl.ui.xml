@@ -1,0 +1,79 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	
+	<ui:style field='cssGlobal' src='./resource/css/adminCssGlobal.css'/>
+	<ui:style>
+.rootPanel{
+
+	
+}
+.dataPanel{
+	padding:5px;
+	margin-bottom:10px;
+	border:1px solid #ccc;
+	width:500px;
+}
+.heading{
+	font-family:arial;
+	font-weight:bold;
+	font-size:14pt;
+	padding:5px;
+}
+.btnPanel{
+    /*border:1px solid #ccc;*/
+    padding:5px;
+   
+}
+.nameTxtBox{
+	width:95%;
+}
+.dscrpTxtArea{
+	width:500px;
+	height:400px;
+}
+.imageRootPanel{
+margin-top:10px;
+margin-bottom:10px;
+border-bottom:1px solid #ccc;
+}		
+	</ui:style>
+	<g:HTMLPanel styleName="{style.rootPanel}">
+	    <g:HTMLPanel ui:field='mainPanel'>
+	    	<g:Label styleName="{cssGlobal.sectionHeading}">Product Group Edit</g:Label>
+	    	<!--  for putting image  -->
+	    	<g:HTMLPanel ui:field='imageRootPanel' styleName="{style.imageRootPanel}">
+	    	    
+            	<g:HTMLPanel ui:field='imagePanel'></g:HTMLPanel>
+            	<g:HTMLPanel styleName="{style.btnPanel}">
+             		<g:Button ui:field='btnLinkImage'>Link Image</g:Button>
+             		<g:Button ui:field='btnUpdateImage'>Update Image</g:Button>
+             		<g:InlineLabel ui:field="lblImageMessage"></g:InlineLabel>
+             	</g:HTMLPanel>
+            </g:HTMLPanel>
+            <!-- for putting the data -->
+	        <g:HTMLPanel ui:field="dataPanel" styleName="{style.dataPanel}">
+            
+            	<g:Label styleName="{cssGlobal.fieldLabel}">Name:</g:Label>
+            	<g:TextBox ui:field="txtName"  styleName="{style.nameTxtBox}"></g:TextBox>
+            	<g:Label styleName="{cssGlobal.fieldLabel}">Description:</g:Label>
+           		<!-- <g:TextArea ui:field="taDescription"  styleName="{style.dscrpTxtArea}"></g:TextArea>-->
+            	<g:HTMLPanel ui:field="rta"></g:HTMLPanel>
+            	<!-- 
+            	<g:Label>Image Path:</g:Label>
+            	<g:TextBox ui:field="txtImageUrl"></g:TextBox>
+            	-->
+            	<g:HTMLPanel styleName="{style.btnPanel}">
+            
+                	<g:Button ui:field="btnSave">Update</g:Button>
+                	<g:InlineLabel ui:field="lblAjaxMessage"></g:InlineLabel>
+            	</g:HTMLPanel>
+            
+
+            
+        	</g:HTMLPanel>
+        	</g:HTMLPanel><!--  end main panel -->
+        	<!-- Simple Panel for putting image browser -->
+        	<g:SimplePanel ui:field='panel1'></g:SimplePanel>
+        </g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,59 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:mgwt="urn:import:com.googlecode.mgwt.ui.client.widget"
+	xmlns:pwt="urn:import:com.ayurma.ayuromaweb.client.mobile.view.header">
+	<ui:with field='res' 
+    	type='com.ayurma.ayuromaweb.client.mobile.view.resource.MainClientBundleMobile'>
+	</ui:with>
+	<ui:style>
+		.heading{
+	
+		}
+		.progressIndicatorContainer{
+	
+		}
+		.progressIndicator{
+			/*display:inline-block;
+			vertical-align:top;*/
+			margin: 10px auto;
+		}
+		.clear{
+		clear:both;
+	}
+	</ui:style>
+	<mgwt:panel.flex.RootFlexPanel ui:field='rootPanel'>
+		<!-- <pwt:HeaderMobileView ui:field='headerView'/> -->  
+		<pwt:HeaderMobileView2 ui:field='headerView'/>  
+		<g:HTML styleName="{style.clear}"></g:HTML>
+		
+		<g:ScrollPanel ui:field="scrollPanel">
+        	<g:FlowPanel ui:field="container">
+        		<mgwt:panel.flex.RootFlexPanel ui:field='rootPanel2'>
+        		<g:HTMLPanel styleName='{style.progressIndicatorContainer}'>
+          			<mgwt:progress.ProgressIndicator  ui:field="progressIndicator" visible="true"
+          			      addStyleNames='{style.progressIndicator}'/>
+          		</g:HTMLPanel>
+          		<g:HTMLPanel ui:field='contentPanel' visible='false'>
+					<g:Label ui:field='lblHeading' styleName='{res.productDetailsStyle.h2}'></g:Label>
+					<g:HTMLPanel ui:field='imagePanel' styleName='{res.productDetailsStyle.imagePanel}'/>
+					<g:Label styleName='{res.productDetailsStyle.h3}'>Description</g:Label>
+					<g:HTMLPanel ui:field='descriptionPanel' styleName='{res.productDetailsStyle.productDescription}'></g:HTMLPanel>
+					
+					<g:HTMLPanel ui:field='basicInfoPanel' styleName='{res.productDetailsStyle.productDescription}'></g:HTMLPanel>
+					<g:HTMLPanel ui:field="specPanel"/>
+					<g:HTMLPanel ui:field="usesPanel"  styleName='{res.productDetailsStyle.usesPanel}'/>
+					<g:HTMLPanel ui:field='btnsPanel' > 
+						<mgwt:button.Button ui:field='btnSendEnquiry' styleName='{res.productDetailsStyle.button}'>Enquiry</mgwt:button.Button>
+						<mgwt:button.Button ui:field='btnGetReports' styleName='{res.productDetailsStyle.button}'>Get Reports</mgwt:button.Button>
+						
+					</g:HTMLPanel>
+	        
+	         		
+				</g:HTMLPanel><!-- content panel this is set visible false when loading data -->
+				</mgwt:panel.flex.RootFlexPanel>
+        	</g:FlowPanel> 
+    	</g:ScrollPanel>
+    	</mgwt:panel.flex.RootFlexPanel>
+	
+</ui:UiBinder> 

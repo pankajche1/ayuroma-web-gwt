@@ -1,0 +1,55 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.rootPanel{
+			padding:5px 0;
+			
+		}
+		.heading1{
+			font-size:14pt;
+			font-weight:bold;
+			padding:5px;
+			color:#222;
+		}
+	   .header{
+
+    font-size: 1em;
+    margin: 0px;
+    padding: 0.1em 0px;
+    width: 100%;
+    white-space: nowrap;
+    word-wrap: normal;
+    background-color: rgb(229, 236, 249);
+    border-top: 1px solid rgb(51, 102, 204);
+
+	
+	
+	   }
+    .heading{
+	   font-size:14pt;
+	   font-weight:bold;
+	   margin:0px;
+	   padding:5px;
+	   
+	
+	}
+	.signInPanel{
+		text-align:right;
+		padding:3px 0 2px;
+ 		border-bottom: 1px solid rgb(201, 215, 241);
+	}
+
+	</ui:style>
+	<g:HTMLPanel styleName='{style.rootPanel}'>
+	    <g:HTMLPanel styleName='{style.signInPanel}'>
+	        <g:InlineLabel ui:field='lblUserName'></g:InlineLabel>
+	    	<g:Anchor ui:field='ancLogout'>Log out</g:Anchor>
+	    </g:HTMLPanel>
+	    <g:Label styleName='{style.heading1}'>Ayuroma Centre</g:Label>
+	   <g:HTMLPanel styleName="{style.header}">
+	    <h1 class='{style.heading}'>Administration Section</h1>
+	   
+	   </g:HTMLPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

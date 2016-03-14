@@ -1,0 +1,60 @@
+.rootPanel{
+	width:980px;
+	margin:0 auto;
+	
+	background-color:#fff;
+	-moz-box-shadow:0px 0px 20px rgba(0,0,0,.75); 
+    -webkit-box-shadow:0px 0px 20px rgba(0,0,0,.75); 
+    box-shadow:0px 0px 20px rgba(0,0,0,.75); 
+	
+}
+/* content is shown on this */
+.contentPanel{
+	min-height:500px;
+}
+/* background of the body */
+@sprite .bgBody1 {
+	overflow:visible;
+	gwt-image: "bgBody1";
+	
+}
+
+@sprite .bgBlueStripes{
+	overflow:visible;
+	gwt-image:"blu_stripes";
+	
+	
+}
+
+@sprite .cartographer{
+	overflow:visible;
+	gwt-image:"cartographer";
+	
+	
+}
+
+@sprite .darkTire{
+	overflow:visible;
+	gwt-image:"dark_Tire";
+	
+	
+}
+@sprite .argyle{
+	overflow:visible;
+	gwt-image:"argyle";
+	
+	
+}
+
+@sprite .greenFibers{
+	overflow:visible;
+	gwt-image:"greenFibers";
+	
+	
+}
+@sprite .blueLeaves{
+	overflow:visible;
+	gwt-image:"blueLeaves";
+	
+	
+}

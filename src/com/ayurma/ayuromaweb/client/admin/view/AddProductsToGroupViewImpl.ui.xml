@@ -1,0 +1,127 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style field='cssGlobal' src='./resource/css/adminCssGlobal.css'/>
+	<ui:style type='com.ayurma.ayuromaweb.client.admin.view.AddProductsToGroupViewImpl.Style'>
+		.rootPanel{
+	padding:5px;
+}
+/* left panel for containing group information data */
+.leftPanel{
+	float:left;
+	width:500px;
+	min-height:500px;
+	padding:5px;
+	border:1px solid #ccc;
+}
+.leftPanelButtonsPanel{
+    padding:5px;
+    border:1px solid #ccc;	
+}
+/* right panel styles */
+.rightPanel{
+	float:left;
+	padding:5px;
+	margin-left:10px;
+	border:1px solid #ddd;
+	min-height:500px;
+	width:400px;
+}
+/* styles of the right panel */
+.rightPanelButtonsPanel1{
+	padding:5px;
+	border:1px solid #cdc;
+	background-color:#efe;
+	margin-bottom:5px;
+	
+}
+.rightPanelButtonsPanel2{
+    padding:5px;
+    border:1px solid #ccc;
+    
+}
+.productsDataPanel{
+    padding:5px;
+    border:1px solid #ccc;	
+}
+.productUnit{
+	font-size:12pt;
+	padding:5px;
+	border-bottom:1px solid #eee;
+}
+/* the current product in the group */
+.curProduct{
+	padding:5px;
+	background-color:#eee;
+	margin:2px 0;
+	height:34px;
+	width:500px;
+}
+/* floating styles */
+.floatRight{
+	float:right;
+}
+.clearBoth{
+	clear:both;
+}
+/* various */
+.evenRow{
+	background-color:#dde;
+}
+.oddRow{
+	background-color:#eef;
+}
+.heading1{
+    font-size:16pt;
+    font-weight:bold;
+    padding:5px;
+}
+.heading2{
+	font-size:14pt;
+	font-weight:bold;
+	padding:5px;
+}
+.groupName{
+	margin-top:5px;
+    font-size:14pt;
+    font-weight:bold;
+    padding:5px;
+	color:teal;
+
+}
+.textMessage{
+	padding:5px;
+	font-size:12pt;
+	
+}
+.groupPanel{
+float:left;
+width:500px;
+}
+.productsPanel{
+margin-left:50px;
+float:left;
+}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:Label styleName="{cssGlobal.sectionHeading}">Add Remove Products From Group section</g:Label>
+		<g:Label ui:field="lblGroupName"  styleName="{style.groupName}"></g:Label>
+		<g:HTMLPanel>
+			<g:Button ui:field='btnAddSelectedProducts'>Add Selected Products</g:Button>
+			<g:Button ui:field='btnSave'>Update</g:Button>
+			<g:InlineLabel ui:field='lblMainMessage'></g:InlineLabel>
+		</g:HTMLPanel>
+		<!-- 
+		<g:HTMLPanel ui:field='dataPanel'></g:HTMLPanel> -->
+		<!--  this panel shows the current product group and its products -->
+		<g:HTMLPanel styleName='{style.groupPanel}'>
+		<g:Label styleName="{style.heading2}">Products list:</g:Label>
+		 <g:HTMLPanel ui:field='curProductsPanel' ></g:HTMLPanel>
+		 </g:HTMLPanel>
+		 <!-- 
+		 <g:Label styleName="{style.heading2}">These are the products to be included</g:Label>
+		<g:HTMLPanel ui:field='selectedProductsPanel'></g:HTMLPanel> -->
+		<!-- this panel keeps the browse products widget -->
+		<g:SimplePanel ui:field='rightPanel' styleName='{style.productsPanel}'></g:SimplePanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

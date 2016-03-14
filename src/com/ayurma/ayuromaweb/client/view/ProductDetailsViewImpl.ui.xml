@@ -1,0 +1,264 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style field='style1' type='com.ayurma.ayuromaweb.client.view.ProductDetailsViewImpl.MyStyle'>
+		.rootPanel{
+     font-family: Arial,sans-serif;
+     padding:10px;
+}
+.heading1{
+    font-family: Arial,sans-serif;
+    font-size: 1.5em;
+   
+    color:#228B22;
+   
+   /* padding:5px 2% 5px 2%;*/
+    margin-bottom:10px;
+    border-bottom:1px solid #ccc;
+	
+}	
+.heading2{
+	 color:#228B22;
+	  font-family: Arial,sans-serif;
+	  margin-bottom:10px;
+	  font-size: 14pt;
+}	
+.pageContent{
+   font-family: Arial,sans-serif;
+}
+.productDetailsData{
+    
+}
+.value{
+    
+}
+.valueName{
+    
+}
+/* added on 16 dec 2013 */
+.basicPanel{
+	width:100%;
+}
+.description{
+	min-width:405px;
+}
+.buttonsPanel{
+vertical-align:top;
+
+}
+.leftPane{
+	
+}
+.productImage{
+
+	max-width:200px;
+}
+.imagePanel{
+	    border:1px solid rgb(204,204,204);
+       /*margin-right:10px;*/
+       padding:10px;
+       max-width:200px;
+
+
+}
+.noImagePanel{
+
+}
+.buttonContainer{
+	padding:5px;
+	margin-top:2px;
+	background-color:#eef;
+	color:#333;
+	font-size:12pt;
+	font-weight:bold;
+	cursor:pointer;
+	cursor:hand;
+	width:200px;
+}
+.buttonContainer:hover{
+
+	background-color:#dde;
+
+}
+/* upto here added on or after 16 dec 2013 */
+.chemicalDatails{
+            /*  border:1px solid #ccc;
+                border-radius:10px;     
+                margin-bottom:5px;
+                padding:5px;*/
+                min-height:170px;
+                
+}   
+/*
+.chemicalDatails h2{
+    text-transform: capitalize;
+          
+                
+}
+*/
+/*
+.chemicalDatails h3{
+   
+                
+}
+*/
+			.imageProduct{
+                border:1px solid #ccc;
+               
+                float:left;
+                margin-right:10px;
+                padding:10px;
+                max-width:200px;
+            }
+            .chemicalDatails .imageProduct{
+                border:1px solid #955;
+               
+                float:left;
+                margin-right:10px;
+                padding:2px;
+            }
+            .chemicalDatails .prouduct-info-container{
+                float:left;
+                width:60%;
+            }
+            .chemicalDatails table{
+                font-family: Arial,sans-serif;
+            }
+            
+            .chemicalDatails table th{
+                background-color:#eee;
+                font-family:arial;
+                padding:10px;
+            }
+            .chemicalDatails table tfoot{
+                color:green;
+                font-style:italic;
+            }
+            .chemicalDatails table tbody td.valueName{
+                text-align:right;
+                font-weight:bold;
+                color:#555;
+                font-size:10pt;
+            }
+            .chemicalDatails table tbody td.botanical-name{
+                font-style:italic;
+            }
+            
+            .chemicalDatails tr.row-odd{
+                background-color:#efe;
+                
+            }
+            .chemicalDatails tr.row-even{
+                background-color:#ded;
+                
+            }
+            .chemicalDatails table tr td{
+                padding:10px;
+               font-family: Arial,sans-serif;
+            }
+            .chemicalDatails .clear{
+                clear:both;
+            }
+.chemicalDatails table caption{
+    text-align:left;
+    margin-bottom:0px;
+    padding:0px;
+ 
+}
+.chemicalDatails .product-stock-info{
+    text-indent:0px;
+    margin-top:10px;
+    font-weight:bold;
+    
+}
+.chemicalDatails .linkEnquiry{
+    padding:5px 10px;
+    text-decoration:none;
+    font-weight:bold;
+    border:1px solid rgb(204, 204, 204);
+     color: rgb(34, 34, 34);
+}
+.chemicalDatails .linkEnquiry:visited{
+ color: rgb(34, 34, 34);
+}
+	.cell1{
+		font-weight:bold;
+		color:rgb(85,85,85);
+		padding:10px;
+		text-align:right;
+	}
+	.oddRow{
+		background-color:rgb(238, 255, 238);
+	}
+	.evenRow{
+		background-color:rgb(230, 250, 230);
+	}
+	.stockInfoPanel{
+		padding:10px;background-color:rgb(230, 250, 230);
+	}
+	.inStock{
+		color:rgb(57, 114, 73);
+		font-weight:bold;
+		margin-left:5px;
+	}
+	.notInStock{
+		color:rgb(150, 57, 73);
+		font-weight:bold;
+		margin-left:5px;
+	}
+	.noImage{
+		
+	}
+	.withImage{
+		margin-left:210px;
+	}
+	.tableCaption{
+    	text-align:left;
+    	margin-bottom:0px;
+    	padding:0px;
+    	font-weight:bold;
+    	font-size:14pt;
+ 
+	}
+	.clearBoth{
+		clear:both;
+	}
+	</ui:style>
+	<g:HTMLPanel styleName="{style1.rootPanel}">
+		<g:HTMLPanel ui:field='ajaxNotificationPanel'>
+	        
+		</g:HTMLPanel>
+		<g:HTMLPanel ui:field='contentPanel' visible='false'>
+			<g:Label ui:field='lblHeading' styleName='{style1.heading2}'></g:Label>
+			<g:HorizontalPanel spacing='5' styleName='{style1.basicPanel}'>
+	    		<!-- image and buttons for enquiry and reports request  -->
+	    		<g:HTMLPanel styleName='{style1.leftPane}'>
+	         		<g:HTMLPanel ui:field='imagePanel' styleName='{style1.imagePanel}'>
+	        
+	         		</g:HTMLPanel>
+	         		<g:HTMLPanel ui:field='btnsPanel' styleName='{style1.buttonsPanel}'> 
+	             		<g:HTML ui:field='sendEnquiry' styleName='{style1.buttonContainer}'>
+							<!-- <g:Button ui:field='btnSendEnquiry'>Enquiry</g:Button> -->
+							Enquiry
+						</g:HTML>
+						<g:HTML ui:field='getReports' styleName='{style1.buttonContainer}'>
+						<!-- <g:Button ui:field='btnGetReports'>Get Reports</g:Button> -->
+						Get Reports
+						</g:HTML>
+		
+			 		</g:HTMLPanel>	        
+	    		</g:HTMLPanel>
+	    		<!-- description -->
+				<g:HTMLPanel ui:field='descriptionPanel' styleName='{style1.description}'></g:HTMLPanel>
+			</g:HorizontalPanel>
+			<g:TabPanel ui:field='tabPanel' width="100%"></g:TabPanel>
+			<!-- 
+				<g:HTML styleName="{style1.clearBoth}"></g:HTML>
+	 		-->
+
+			<!-- specification like refractive index data containing table -->
+			<g:HTMLPanel ui:field="specificationsTablePanel">
+			</g:HTMLPanel>
+		</g:HTMLPanel><!-- content panel this is set visible false when loading data -->
+	</g:HTMLPanel>
+</ui:UiBinder> 

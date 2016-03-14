@@ -1,0 +1,54 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style field='cssGlobal' src='./resource/css/adminCssGlobal.css'/>
+	<ui:style>
+		.rootPanel{
+	
+	
+	
+margin-top:10px;
+margin-left:10px;
+	
+}
+.lbl{
+	
+	margin-top:5px;
+	
+}
+.txtName{
+	width:300px;
+}
+.txtDescription{
+	width:300px;
+	height:300px;
+	
+	
+	font-family:arial;
+}
+.txtImageUrl{
+	width:300px;
+	background-color:#eee;
+	border:1px solid gold;
+}
+.btnPanel{
+	padding:5px;
+}
+	</ui:style>
+	<g:HTMLPanel>
+	    <g:Label styleName="{cssGlobal.sectionHeading}">New Product</g:Label>
+	    <g:HTMLPanel styleName="{style.rootPanel}" ui:field="rootPanel">
+			<g:Label styleName="{cssGlobal.fieldLabel}">Name:</g:Label>
+			<g:TextBox ui:field="txtName" styleName="{style.txtName}"></g:TextBox>
+			<g:Label styleName="{cssGlobal.fieldLabel}">Description:</g:Label>
+			<g:TextArea ui:field="taDescription" styleName="{style.txtDescription}"></g:TextArea>
+			<!-- <g:Label styleName="{style.lbl}">Image Path:</g:Label>
+			<g:TextBox ui:field="txtImageUrl" styleName="{style.txtImageUrl}"></g:TextBox> -->
+			<g:HTMLPanel styleName='{style.btnPanel}'>
+				<g:Button  ui:field="btnAdd" >Add</g:Button>
+				<g:Button  ui:field="btnReset" >Reset</g:Button>
+				<g:InlineLabel ui:field="lblMessage"></g:InlineLabel>
+			</g:HTMLPanel>
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

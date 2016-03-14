@@ -1,0 +1,31 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.mainContent{
+			
+			
+			margin-right:326px;
+			
+	    }
+	    .sideBar{
+			width:315px;
+			
+			padding:5px;
+			float:right;
+			background-color:#eef;
+	
+	    }
+	   .clearBoth{
+	       clear:both;
+	   }
+	</ui:style>
+	<g:HTMLPanel>
+	<g:HTMLPanel ui:field='sideBar'  styleName="{style.sideBar}"></g:HTMLPanel>
+	<g:HTMLPanel ui:field='mainContent' styleName="{style.mainContent}"></g:HTMLPanel>
+	<div class='{style.clearBoth}'></div>
+	
+	
+	
+	</g:HTMLPanel>
+</ui:UiBinder>

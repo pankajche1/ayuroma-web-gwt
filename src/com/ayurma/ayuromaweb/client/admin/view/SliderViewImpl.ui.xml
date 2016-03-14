@@ -1,0 +1,27 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+		<ui:style field='cssGlobal' src='./resource/css/adminCssGlobal.css'/>
+	<ui:style>
+		.heading1{
+	
+			font-weight:bold;
+			padding:5px;
+			font-size:16pt;
+		}
+		.buttonsPanel{
+			margin-top:5px;
+			padding:5px;
+		}
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<g:Label styleName='{cssGlobal.sectionHeading}'>Create new slider films or edit a current film</g:Label>
+		<g:HTMLPanel styleName='{style.buttonsPanel}'>
+			<g:Button ui:field='btnCreateNew'>Create New</g:Button>
+			<g:Button ui:field='btnBrowseSlider'>Browse Sliders</g:Button>
+			<g:Button ui:field='btnUploadSliderImages'>Upload Slider Images</g:Button>
+			<g:Button ui:field='btnBrowseSliderImages'>Browse Slider Images</g:Button>
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

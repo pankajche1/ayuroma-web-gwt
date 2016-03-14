@@ -1,0 +1,100 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:with field='resource' type='com.ayurma.ayuromaweb.client.view.resource.header.HeaderClientBundle' ></ui:with>
+	<ui:style>
+		.basePanel{
+
+			background-color:#fff;
+	
+			/*width:980px;*/
+	
+			margin:0 auto;
+			position:relative;
+			z-index:600;
+	}
+	.topBar{
+		height:5px;
+		background-color:rgb(51, 102, 153);
+	}
+		/* this contains the logo and search box*/
+	.rootPanel{
+	   /* margin:0 auto;
+	    width:80%;*/
+	   height:85px;
+	  /* height:96px;*/
+	    padding:10px 5px 0px 5px;
+	}
+.sidePanel{
+	     float:right;
+	     margin-top:20px;
+	}
+	.clear{
+		clear:both;
+	}
+	.companyName{
+	   font-family:Georgia,Utopia,'Palatino Linotype',Palatino,serif;
+	   font-size:22pt;
+	   letter-spacing:0.1em;
+	   color:#666;
+	   /*float:left;*/
+	   /*float:right;*/
+	   padding: 0px 0px 5px 10px;
+	   border-bottom: 1px solid #ccc;
+	   margin:0;
+ 		margin-left:81px;
+	   text-shadow:1px 2px 3px rgba(0, 0, 0, 0.2);	
+	}
+	.companyLogoContainer{
+	   float:left;
+	   width:400px;
+	
+	}
+	.companyLogoContainer p{
+	   font-family:arial;
+	   font-size:11pt;
+	   letter-spacing:0.2em;
+	  /* text-align:right;*/
+	   margin-left:85px;
+		margin-top:5px;
+		color:rgb(51, 102, 153);
+
+	}
+	.logoSpace{
+	  /* width:50px;
+	   height:50px;*/
+	 /*  background-color:#f55;*/
+	  /* opacity:0.5;*/
+	  /* border:5px solid #f55;*/
+
+    float: left;
+    z
+    /*border-radius: 25px;*/
+
+	   
+	}		
+	</ui:style>
+	<g:HTMLPanel ui:field="rootPanel" styleName='{style.basePanel}'>
+	    <g:HTMLPanel styleName='{style.topBar}'></g:HTMLPanel>
+	 <g:HTMLPanel styleName='{style.rootPanel}' >
+	   <!-- 
+	       <g:Image styleName='{res.header2.imgLogo}' resource='{res.logo}'></g:Image>
+		
+	   -->
+	       <g:HTMLPanel styleName="{style.companyLogoContainer}">
+	       		<div class="{style.logoSpace}">
+	        		<!-- <g:Image resource='{resource.logo}'></g:Image> -->
+	        		<g:Image resource='{resource.logo3}'></g:Image>
+	       		</div>
+	       
+	       		<h1 class="{style.companyName}">Ayuroma Centre</h1>
+	       		<p>Natural flavours and fragrances</p>
+	       </g:HTMLPanel>
+		
+				
+			<g:HTMLPanel ui:field="sidePanel" styleName='{style.sidePanel}'></g:HTMLPanel>
+			<g:HTML styleName="{style.clear}"></g:HTML>
+		
+	   </g:HTMLPanel>
+	   </g:HTMLPanel>
+</ui:UiBinder> 

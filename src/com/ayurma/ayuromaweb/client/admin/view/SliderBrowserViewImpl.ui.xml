@@ -1,0 +1,36 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style field='cssGlobal' src='./resource/css/adminCssGlobal.css'/>
+	<ui:style type='com.ayurma.ayuromaweb.client.admin.view.SliderBrowserViewImpl.MyStyle'>
+		.film{
+	       margin-bottom:5px;
+	       padding:5px;
+	       height:50px;
+	       background-color:#ccf;
+	   }  
+	   .floatRight{
+	       float:right;
+	   }
+	   .clearBoth{
+	       clear:both;
+	   }
+		.mainContent{
+			margin-top:10px;
+		}
+		.dataPanel{
+			margin-top:10px;
+			width:500px;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+	    <g:Label styleName="{cssGlobal.sectionHeading}">Slider Browser</g:Label>
+		<g:HTMLPanel styleName="{style.mainContent}">
+	   		<g:Button ui:field='btnLoadFilms'>Load Slider Films</g:Button>
+	   		<g:InlineLabel ui:field='lblMainMessage'></g:InlineLabel>
+		</g:HTMLPanel>
+		<g:HTMLPanel styleName="{style.dataPanel}" ui:field="dataPanel">
+	
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

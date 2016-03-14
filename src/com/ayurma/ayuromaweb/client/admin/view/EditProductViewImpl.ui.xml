@@ -1,0 +1,121 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style field='cssGlobal' src='./resource/css/adminCssGlobal.css'/>
+	<ui:style>
+		.rootPanel{
+		}
+		.rta1{
+	       max-width:500px;
+	    }
+		.dataPanel{
+			margin-left:5px;
+			padding: 10px;
+			border-left: 1px solid rgb(51, 102, 204);
+
+
+		}
+  		.commonPanel{
+			/*border-bottom:1px solid #ccc;*/
+			padding:5px;
+			
+			
+		}
+		.commonContainer{
+			padding:5px;
+			border:1px solid #ccc;
+			margin-bottom:5px;
+		}
+		.btnPanel{
+    		border:1px solid #ccc;
+    		padding:5px;
+    		background-color:#eef;
+		}
+		.imagePanel{
+			padding:10px;
+
+
+		}
+		.noImage{
+			width:200px;
+			height:200px;
+			background-color:#eef;
+			font-family:Georgia,Utopia,'Palatino Linotype',Palatino,serif;
+			color:#fff;
+			text-shadow:1px 2px 3px rgba(0, 0, 0, 0.2);
+			text-align:center;
+			font-size:30pt;
+			line-height:200px;
+		}
+
+	   	.lblImageMessage{
+			width:200px;
+		}
+	</ui:style>
+<g:HTMLPanel ui:field="rootPanel"  styleName="{style.rootPanel}">
+    <g:HTMLPanel ui:field='defaultPanel'>
+    <g:Label styleName="{cssGlobal.sectionHeading}">Edit Product</g:Label>
+	
+	<g:Label ui:field="lblMainMessage"></g:Label>
+	<g:HorizontalPanel spacing='10'>
+	<!--  panel to contain the image widget -->
+	<!--  first column of the horizontal panel -->
+	<g:HTMLPanel>
+           
+
+        <g:HTMLPanel ui:field='imagePanel' styleName="{style.imagePanel}">
+            <g:HTML ui:field='noImagePanel' styleName="{style.noImage}">No Image</g:HTML>
+        </g:HTMLPanel>
+        <g:HTMLPanel>
+         <g:Button ui:field='btnLinkImage'>Link Image</g:Button>
+        <g:Button ui:field='btnUpdateImage'>Update Image</g:Button>
+        </g:HTMLPanel>
+        <g:Label ui:field="lblImageMessage" styleName="{style.lblImageMessage}"></g:Label>       
+    </g:HTMLPanel>
+	<!-- the data to edit comes on this panel: -->
+	<!--  second column of the horizontal panel -->
+	<g:HTMLPanel ui:field="dataPanel" styleName="{style.dataPanel}">
+		
+		<g:Label styleName="{cssGlobal.fieldLabel}">Name:</g:Label>
+		<g:TextBox ui:field="txtName" width='50%'></g:TextBox>
+		<g:Label styleName="{cssGlobal.fieldLabel}">Description:</g:Label>
+		<g:HTMLPanel ui:field="rta1" styleName='{style.rta1}'></g:HTMLPanel>
+		
+		<g:HTMLPanel styleName="{style.commonPanel}">
+			<g:CheckBox ui:field='chk0'  name='0'>In stock</g:CheckBox>
+		</g:HTMLPanel>
+		<!--  <g:Label styleName="{style.lbl}">Image Path:</g:Label>
+		<g:TextBox ui:field="txtImageUrl" styleName="{style.txtImageUrl}"></g:TextBox>-->
+		<g:HTMLPanel styleName="{style.commonPanel}">
+			<g:Button styleName="" ui:field="btnSave" >Update</g:Button>
+			<g:InlineLabel ui:field='lblMessage'></g:InlineLabel>
+		</g:HTMLPanel>
+		<!-- 
+		 <g:HTMLPanel styleName="{style.commonContainer}">
+		   
+		    <g:HTMLPanel>
+		        <g:Image ui:field='imgProduct' width='100px'></g:Image>
+		    </g:HTMLPanel> -->
+		    <!-- 
+		    <g:HTMLPanel styleName="{style.commonPanel}">
+		         <g:Button ui:field='btnGetImageUploadUrl'>Upload Image</g:Button>
+		         <g:InlineLabel ui:field='lblMessageImage'></g:InlineLabel>
+		    </g:HTMLPanel>
+		    <div>
+		        <g:FormPanel ui:field="formImageUpload">
+			        <g:HTMLPanel>
+			           <g:FileUpload name='myFile'></g:FileUpload>
+			           <g:Hidden ui:field='keyProduct'></g:Hidden>
+			           <g:SubmitButton ui:field='btnUploadImage'>Upload</g:SubmitButton>
+			        </g:HTMLPanel>
+		        </g:FormPanel>
+		    </div>	
+		    -->
+		<!-- </g:HTMLPanel> -->	
+
+	</g:HTMLPanel>
+	</g:HorizontalPanel>
+	</g:HTMLPanel>
+	<g:SimplePanel ui:field='extraPanel'></g:SimplePanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

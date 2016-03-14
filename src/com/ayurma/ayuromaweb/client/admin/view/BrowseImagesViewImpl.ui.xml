@@ -1,0 +1,70 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style field='cssGlobal' src='./resource/css/adminCssGlobal.css'/>
+	<ui:style type='com.ayurma.ayuromaweb.client.admin.view.BrowseImagesViewImpl.MyCss'>
+		.btnPanel{
+	       padding:5px;
+	       margin-top:5px;
+	       border:1px solid #ccc;
+	       
+	    }
+	    .head{
+           font-size:12pt;
+           font-weight:bold;
+           padding:2px;
+           border-bottom:1px solid #ccc;
+        }
+        .message{
+           font-size:12pt;
+           font-weight:bold;	
+           padding:2px;
+           
+	
+	}
+		.selectedItem{
+			background-color:#55f;
+		}
+		.defaultItem{
+			background-color:#fff;
+		}
+		.noImage{
+			/*width:200px;*/
+			height:200px;
+			background-color:#eef;
+			font-family:Georgia,Utopia,'Palatino Linotype',Palatino,serif;
+			color:#fff;
+			text-shadow:1px 2px 3px rgba(0, 0, 0, 0.2);
+			text-align:center;
+			font-size:30pt;
+			line-height:200px;
+		}
+.floatRight{
+float:right;
+}
+	</ui:style>
+	<g:HTMLPanel>
+	<g:Label  styleName="{cssGlobal.sectionHeading}">Browse Images</g:Label>
+	<g:HTMLPanel ui:field="btnPanel" styleName="{style.btnPanel}">
+       <g:InlineLabel>Page Number:</g:InlineLabel>
+       <g:TextBox ui:field="txtNumPage" width='20px'>1</g:TextBox>
+       <g:InlineLabel>Items per page:</g:InlineLabel>
+       <g:TextBox ui:field="txtItemsPerPage" width='20px'>10</g:TextBox>
+       <g:Button ui:field="btnLoadImages">Show</g:Button>
+       <g:Button ui:field="btnClearCacheImages" addStyleNames="{style.floatRight}">Clear cache</g:Button>
+        <g:InlineLabel ui:field='lblMessage' styleName="{style.message}"></g:InlineLabel>
+      
+    </g:HTMLPanel>
+   <g:HTMLPanel ui:field='noImagesToShowPanel' styleName="{style.noImage}">No images to display</g:HTMLPanel>
+    <g:HTMLPanel ui:field='dataPanel'>
+        
+        
+    </g:HTMLPanel>
+    
+    <g:HTMLPanel ui:field='bottomPanel'>
+        <g:Button ui:field='btnCancel'>Cancel</g:Button>
+        <g:Button ui:field='btnOk'>Ok</g:Button>
+        
+    </g:HTMLPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

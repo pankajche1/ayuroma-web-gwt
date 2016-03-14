@@ -1,0 +1,323 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.usesRootPanel{
+			border:1px solid #ccc;
+			padding:5px;
+			margin-top:5px;
+			
+		}
+		.commonContainer{
+			padding:5px;
+			border:1px solid #ccc;
+			margin-bottom:5px;
+			margin-top:5px;
+			background-color:#eef;
+		}
+
+		.botPanel{
+			padding:5px;
+			border:1px solid #ccc;
+			margin-bottom:5px;
+			margin-top:5px;
+			float:left;
+	    }
+		.commonPanel{
+			/*border-bottom:1px solid #ccc;*/
+			padding:5px;
+		}
+		.description{width:95%;height:200px;font-family:arial;}
+		.rta1{
+			
+
+		}	
+
+		.heading{
+			font-weight:bold;
+			background-color:#ccd;
+			padding:5px;
+		}
+		.panelFloatLeft{
+			float:left;
+			padding:5px;
+		}
+		.panelFloatRight{
+				float:right;
+			padding:5px;
+		}
+		.leftSec{
+			float:left;
+			width:55%;
+	
+		}
+		.rightSec{
+			float:left;
+			width:40%;
+			margin-left:2%;
+	    }
+	    .name{
+   			 font-size: 1.2em;
+    		color: rgb(34, 139, 34);
+    		font-weight: bold;
+		}
+		.lblName{
+   			 font-size: 1.2em;
+   			 font-weight: bold;
+    		
+		}
+	</ui:style>
+	
+	<g:HTMLPanel ui:field="rootPanel">
+		<h2>Product Details Edit Section</h2>
+		<g:Label ui:field="lblMasterMessage"></g:Label>
+		<!-- this is the content area -->
+		<g:HTMLPanel ui:field='editorPanel'>
+		<g:HTMLPanel>
+			   
+			    <g:InlineLabel styleName="{style.lblName}" >Name: </g:InlineLabel>
+			    <g:InlineLabel ui:field="txtName" styleName="{style.name}"></g:InlineLabel>
+			 </g:HTMLPanel>
+		<g:HTMLPanel ui:field='tabPanelContainer'>
+		
+		</g:HTMLPanel>
+		<g:HTMLPanel ui:field="dataPanel">
+		<g:HTMLPanel styleName="{style.leftSec}">
+
+			    <!-- new description -->
+			  
+			   
+			     
+			
+			    	 <!--  <g:RichTextArea ui:field="rta1"  styleName="{style.rta1}"></g:RichTextArea> -->  
+			    
+		   			
+                    <!--  description widgets will come on this panel 
+			        <g:HTMLPanel ui:field='desPanel'>
+			        
+			        
+			        </g:HTMLPanel> 
+			        
+			     
+			        <g:HTMLPanel>
+			            
+			            <g:Button ui:field='bntNewList'>New List</g:Button>
+			        </g:HTMLPanel>-->
+			        <g:HTMLPanel ui:field="desUpdatePanel" styleName="{style.commonPanel}">
+			    	<g:Button ui:field='btnUpdateDes'>Update Description</g:Button>
+			    	<g:InlineLabel ui:field='msgDes'></g:InlineLabel>
+			    	
+			         </g:HTMLPanel>
+			  
+			    <!-- 
+			    <g:HTMLPanel styleName="{style.commonContainer}">
+			    <g:Label>Description:</g:Label>
+			    <g:TextArea ui:field="taDescription" styleName="{style.description}" >
+			    </g:TextArea>
+
+			    </g:HTMLPanel> -->
+			
+			<!-- 
+			<g:CheckBox ui:field='chkInStock'>In Stock</g:CheckBox>
+			 -->
+			
+			 <g:HTMLPanel ui:field="basicInfoPanel" styleName="{style.commonContainer}">
+			<g:Label>Common Name:</g:Label>
+			<g:TextBox ui:field="txtCommonName" width="300px"></g:TextBox>
+			<g:CheckBox ui:field='chk0' name='5'>Display</g:CheckBox>
+			<g:Label>Botanical Name:</g:Label>
+			<g:TextBox ui:field="txtBotName" width="300px"></g:TextBox>
+			<g:CheckBox ui:field='chk1' name='6'>Display</g:CheckBox>
+			<g:Label>Country of Origin:</g:Label>
+			<g:TextBox ui:field="txtCountryOrigin" width="300px"></g:TextBox>	
+			<g:CheckBox ui:field='chk2'  name='7'>Display</g:CheckBox>
+			<g:Label>Chemical Constituents:</g:Label>
+			
+			<g:TextBox ui:field="txtChemConstituents" width="300px"></g:TextBox>
+			<g:CheckBox ui:field='chk3' name='8'>Display</g:CheckBox>
+			
+			<g:Label>Obtained from plant part:</g:Label>
+			<g:TextBox ui:field="txtPlantParts" width="300px"></g:TextBox>		
+			<g:CheckBox ui:field='chk4' name='9'>Display</g:CheckBox>	
+			
+			<g:Label>Saparation Methods:</g:Label>
+			<g:TextBox ui:field="txtExtractionMethods" width="300px"></g:TextBox>
+			<g:CheckBox ui:field='chk5' name='10'>Display</g:CheckBox>
+			<g:HTMLPanel styleName='{style.commonPanel}'>
+				<g:Button ui:field='btnUpdateGenInfo'>Update</g:Button>
+				<g:InlineLabel ui:field='msgGenInfo'></g:InlineLabel>
+			</g:HTMLPanel>
+			</g:HTMLPanel>
+		
+		
+			
+
+			    	
+			    		<g:HTMLPanel ui:field="rtaUses"></g:HTMLPanel>
+					
+				<!-- <g:HTMLPanel ui:field='usesPanel'></g:HTMLPanel> --> 
+				<!--<g:Button ui:field='btnAddUse'>Add Use</g:Button>-->
+				<g:HTMLPanel ui:field='usesUpdatePanel' styleName="{style.commonPanel}">
+				 <g:Button ui:field='btnUpdateUse'>Update 'Uses'</g:Button> 
+				<g:InlineLabel ui:field='msgUpdateUses'></g:InlineLabel>
+				</g:HTMLPanel>
+				
+	
+			</g:HTMLPanel><!-- left panel -->
+			<!--  properties section starts from here -->
+			<g:HTMLPanel styleName="{style.rightSec}">
+				
+				 <g:HTMLPanel ui:field="propertiesPanel" styleName="{style.commonContainer}">
+				<g:HTMLPanel styleName='chkDisplayPanel'>
+					<g:CheckBox ui:field='chkSec2Dspl'>Display Specification Section</g:CheckBox>
+				</g:HTMLPanel>
+		
+				<g:Label>Color And Appearance:</g:Label>
+				<g:TextBox ui:field="txtColorApperance" width="300px"></g:TextBox>	
+				<g:CheckBox ui:field='chk6' name='11'>Display</g:CheckBox>
+			
+				<g:Label>Order:</g:Label>
+				<g:TextBox ui:field="txtOrder" width="300px"></g:TextBox>
+				<g:CheckBox ui:field='chk7'  name='12'>Display</g:CheckBox>
+			
+				<g:Label>Solubility:</g:Label>
+				<g:TextBox ui:field="txtSolubility" width="300px"></g:TextBox>	
+				<g:CheckBox ui:field='chk8' name='13'>Display</g:CheckBox>
+				<g:HTMLPanel styleName='{style.commonPanel}'>
+					<g:Button ui:field='btnUpdateSpcf'>Update this</g:Button>
+					<g:InlineLabel ui:field='msgSpc'></g:InlineLabel>
+				</g:HTMLPanel>
+				</g:HTMLPanel>
+				<g:HTMLPanel ui:field="specificationPanel">
+				<g:HTMLPanel styleName='{style.commonContainer}'>
+					
+					<g:Label styleName='{style.heading}'>Specific Gravity:</g:Label>
+					<g:HTMLPanel>
+						<g:HTMLPanel styleName='{style.panelFloatLeft}'>
+							<g:HTMLPanel>
+							<g:RadioButton ui:field='rdSpGrSingle' name='spGravRadios'></g:RadioButton>
+							<g:TextBox ui:field="txtSpGrav" width="50px"></g:TextBox>
+							</g:HTMLPanel>
+							<g:HTMLPanel>
+							<g:RadioButton ui:field='rdSpGrRange' name='spGravRadios'></g:RadioButton>	
+							<g:TextBox ui:field="tbSpGravFrom" width="50px"></g:TextBox>
+							<g:TextBox ui:field="tbSpGravTo" width="50px"></g:TextBox>
+							</g:HTMLPanel>
+						</g:HTMLPanel>
+				
+				<g:HTMLPanel styleName='{style.panelFloatRight}'>
+					<g:Label>Temperature</g:Label>
+					<g:TextBox ui:field='tbTempSpGrav' width="50px"></g:TextBox>
+					<g:ListBox ui:field='lbTempUnitSpGrav'></g:ListBox>
+				</g:HTMLPanel>
+				<g:HTML styleName='clear'></g:HTML>
+				<g:CheckBox ui:field='chkDsplSpGrav' checked='true'>Display</g:CheckBox>
+				<g:HTMLPanel styleName='{style.commonPanel}'>
+					<g:Button ui:field='btnUpdateSpGrav'>Update Specific Gravity</g:Button>
+					<g:InlineLabel ui:field='msgSpGrav'></g:InlineLabel>
+				</g:HTMLPanel>
+			</g:HTMLPanel>
+			</g:HTMLPanel>
+			
+			<g:HTMLPanel styleName='{style.commonContainer}'>
+			
+			<g:Label styleName='{style.heading}'>Refractive Index:</g:Label>
+			
+			
+			<g:HTMLPanel>
+			<g:HTMLPanel styleName='{style.panelFloatLeft}'>
+				<g:HTMLPanel>
+					<g:RadioButton ui:field='rdRfrIndexSingle' name='rfrIndexRadios'></g:RadioButton>
+					<g:TextBox ui:field="txtRfrIndex" width="50px"></g:TextBox>	
+				</g:HTMLPanel>	
+				<g:HTMLPanel>
+					<g:RadioButton ui:field='rdRfrIndexRange' name='rfrIndexRadios'></g:RadioButton>	
+					<g:TextBox ui:field="tbRfrIndexFrom" width="50px"></g:TextBox>
+					<g:TextBox ui:field="tbRfrIndexTo" width="50px"></g:TextBox>
+				</g:HTMLPanel>	
+			</g:HTMLPanel>	
+				<g:HTMLPanel styleName='{style.panelFloatRight}'>
+					<g:Label>Temperature</g:Label>
+					<g:TextBox ui:field='tbTempRfrIndex' width="50px"></g:TextBox>
+					<g:ListBox ui:field='lbTempUnitRfrIndex'></g:ListBox>	
+				</g:HTMLPanel>
+				<g:HTML styleName='clear'></g:HTML>
+				<g:CheckBox ui:field='chkRfrIndexDspl'>Display</g:CheckBox>	
+				<g:HTMLPanel styleName='{style.commonPanel}'>
+					<g:Button  ui:field='btnUpdateRfrInd'>Update Refractiv Index</g:Button>
+					<g:InlineLabel ui:field='msgRfrIndex'></g:InlineLabel>
+				</g:HTMLPanel>
+			</g:HTMLPanel>
+			</g:HTMLPanel>
+			
+			<g:HTMLPanel styleName='{style.commonContainer}'>
+			
+			<g:Label styleName='{style.heading}'>Optical Rotation:</g:Label>
+			
+			<g:HTMLPanel>
+			<g:HTMLPanel styleName='{style.panelFloatLeft}'>
+				<g:HTMLPanel>
+					<g:RadioButton ui:field='rdOptRotSingle' name='optRotRadios'></g:RadioButton>
+					<g:TextBox ui:field="txtOptRot" width="50px"></g:TextBox>
+				</g:HTMLPanel>
+				<g:HTMLPanel>
+					<g:RadioButton ui:field='rdOptRotRange' name='optRotRadios'></g:RadioButton>	
+					<g:TextBox ui:field="tbOptRotFrom" width="50px"></g:TextBox>
+					<g:TextBox ui:field="tbOptRotTo" width="50px"></g:TextBox>
+				</g:HTMLPanel>
+			</g:HTMLPanel>
+			<g:HTML styleName='clear'></g:HTML>
+				<g:CheckBox ui:field='chkOptRotDspl'>Display</g:CheckBox>
+				<g:HTMLPanel styleName='{style.commonPanel}'>
+					<g:Button ui:field='btnUpdateOptRot'>Update Optical Rotation</g:Button>
+					<g:InlineLabel ui:field='msgOptRot'></g:InlineLabel>
+				</g:HTMLPanel>
+				
+			</g:HTMLPanel>
+			</g:HTMLPanel>
+				
+			<g:HTMLPanel styleName='{style.commonContainer}'>	
+			
+			
+			<g:Label styleName='{style.heading}'>Flash Point:</g:Label>
+		
+			<g:HTMLPanel styleName='{style.panelFloatLeft}'>
+				<g:HTMLPanel>
+					<g:RadioButton ui:field='rdFlashPntSingle' name='FlashPntRadios'></g:RadioButton>
+					<g:TextBox ui:field="txtFlashPoint" width="50px"></g:TextBox>
+				</g:HTMLPanel>
+				<g:HTMLPanel>	
+					<g:RadioButton ui:field='rdFlashPntRange' name='FlashPntRadios'></g:RadioButton>	
+					<g:TextBox ui:field="tbFlashPntFrom" width="50px"></g:TextBox>
+					<g:TextBox ui:field="tbFlashPntTo" width="50px"></g:TextBox>
+				</g:HTMLPanel>
+			
+
+			</g:HTMLPanel>
+				<g:HTMLPanel styleName='{style.panelFloatRight}'>
+					<g:Label>Temperature Unit</g:Label>
+					<g:ListBox ui:field='lbTempUnitFlashPoint'></g:ListBox>	
+				</g:HTMLPanel>
+					<g:HTML styleName='clear'></g:HTML>
+				<g:CheckBox ui:field='chkFlshPntDspl'>Display</g:CheckBox>		
+				<g:HTMLPanel styleName='{style.commonPanel}'>
+					<g:Button ui:field='btnUpdateFlsPnt'>Update Flash Point</g:Button>
+					<g:InlineLabel ui:field='msgFlashPoint'></g:InlineLabel>
+				</g:HTMLPanel>	
+			</g:HTMLPanel>
+			</g:HTMLPanel>
+	</g:HTMLPanel>
+		<g:HTML styleName='clear'></g:HTML>
+			<!-- 
+			<g:HTMLPanel styleName='{style.botPanel}'>
+			<g:InlineLabel>Note: Use this button only if you want to update the whole data </g:InlineLabel>
+			<g:Button ui:field="btnSave">Update All</g:Button>
+			<g:InlineLabel ui:field='ajaxPanel'></g:InlineLabel>
+			</g:HTMLPanel>	
+			 -->
+		<g:HTML styleName='clear'></g:HTML>
+		
+		</g:HTMLPanel><!-- dataPanel -->
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

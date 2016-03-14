@@ -1,0 +1,160 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:with field='res' 
+    type='com.ayurma.ayuromaweb.client.view.resource.MainClientBundle'>
+</ui:with>
+	<!-- <ui:style field='cssGlobal' type='com.ayurma.ayuromaweb.client.view.resource.MainClientBundle.GlobalStyle'/> -->
+	<ui:style>
+		.rootPanel{
+
+			background-color:#111;
+			
+        }
+		.panelHead{
+			padding:5px;
+			font-weight:bold;
+			font-size:14pt;
+			color:#444;
+			letter-spacing:0.1em;
+		}
+		.subHead{
+			padding:5px;
+			font-weight:bold;
+			font-size:10pt;
+			color:#888;
+			letter-spacing:0.1em;
+
+		}	
+		.addressHead{
+			padding:5px;
+			font-weight:bold;
+			font-size:12pt;
+			color:#888;
+			letter-spacing:0.1em;
+		}
+		.addressBody{
+			padding:5px;
+			line-height:1.5em;
+			
+			letter-spacing:0.1em;
+			color:#bbb;
+		}
+		.textType1{
+			letter-spacing:0.1em;
+			color:#bbb;
+        }
+		.contactsPanel{
+			
+		}
+		.contentPanel{
+			padding:10px;
+			
+			border-left:1px solid #777;
+		}
+		.navPanel{
+			padding:10px;
+			width:200px;
+
+		}
+		.navButton{
+
+		
+  			margin-bottom:2px;
+			/*background-color:#111;*/
+			background:none;
+  			padding: 5px 7px;
+  			text-decoration: none;
+  			cursor: pointer;
+  			cursor: hand;
+  			font-size:small;
+  			
+  			border:0px solid #bbb;
+  			
+  			/*color:#222;*/
+			color:rgb(51, 102, 153)	
+ 			
+		
+		}	
+		.navButton:hover{
+			color:rgb(51, 170, 255);
+        }
+		.bottomBar{
+    		background-color:#444;
+    		color:#eee;
+    		padding:2px;
+    		text-align:center;
+    		font-size:9pt;
+ 		}
+		.clearBoth{
+			clear:both;
+		}
+	</ui:style>
+	<g:HTMLPanel styleName="{style.rootPanel}" addStyleNames="{res.style.darkTire}">
+	    <g:Grid>
+	        <g:row>
+	            <g:customCell>
+	             
+	                <g:Label styleName="{style.panelHead}">NAVIGATION</g:Label>
+	               
+	            </g:customCell>
+	            <g:customCell>
+	             
+	                <g:Label styleName="{style.panelHead}">CONTACTS</g:Label>
+	                
+	            </g:customCell>
+	        </g:row>
+	        <g:row>
+	    <g:customCell>
+	     <g:HTMLPanel styleName="{style.navPanel}">
+	         <g:HTMLPanel><g:Button ui:field='btnHome' styleName="{style.navButton}">HOME</g:Button></g:HTMLPanel>
+	         <g:HTMLPanel><g:Button ui:field='btnProducts' styleName="{style.navButton}">PRODUCTS</g:Button></g:HTMLPanel>
+	         <g:HTMLPanel><g:Button ui:field='btnAboutUs' styleName="{style.navButton}">ABOUT US</g:Button></g:HTMLPanel>
+	         <g:HTMLPanel><g:Button ui:field='btnContactUs' styleName="{style.navButton}">CONTACT US</g:Button></g:HTMLPanel>
+	         
+	     </g:HTMLPanel>	                
+	    </g:customCell>
+	            <g:customCell>
+	                  <g:HorizontalPanel>
+	 <g:HTMLPanel styleName="{style.contentPanel}">
+	     <g:Label ui:field='lblAddressHead' styleName="{style.addressHead}"></g:Label>
+	     <g:HTMLPanel ui:field='addressPanel' styleName="{style.addressBody}">
+	         
+	         
+	     </g:HTMLPanel>
+	     
+	 </g:HTMLPanel>
+	 <g:HTMLPanel styleName="{style.contentPanel}">
+	     <g:Label styleName="{style.subHead}">Mobiles</g:Label>
+	     <g:HTMLPanel ui:field='mobilesPanel' styleName="{style.textType1}">
+	         
+	         
+	     </g:HTMLPanel>
+	     <g:Label styleName="{style.subHead}">Phones</g:Label>
+	     <g:HTMLPanel ui:field='phonesPanel' styleName="{style.textType1}">
+	         
+	         
+	     </g:HTMLPanel>	     
+	 </g:HTMLPanel>
+	 <g:HTMLPanel styleName="{style.contentPanel}">
+	     <g:Label styleName="{style.subHead}">Emails</g:Label>
+	     <g:HTMLPanel ui:field='emailsPanel' styleName="{style.textType1}">
+	         
+	         
+	     </g:HTMLPanel>
+	     
+	 </g:HTMLPanel>
+	 </g:HorizontalPanel>
+	                
+	            </g:customCell>
+	        </g:row>	        
+	        
+	    </g:Grid>
+	    
+	 
+	
+	 <g:HTML styleName="{style.bottomBar}">
+	     &copy; 2013 Ayuroma Centre Private Limited  |  all right reserved
+	 </g:HTML>   
+	</g:HTMLPanel>
+</ui:UiBinder> 

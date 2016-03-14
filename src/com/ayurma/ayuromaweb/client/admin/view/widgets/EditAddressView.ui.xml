@@ -1,0 +1,81 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style field='cssGlobal' src='../resource/css/adminCssGlobal.css'/>
+	<ui:style type='com.ayurma.ayuromaweb.client.admin.view.widgets.EditAddressView.Style'>
+	.textBox{
+		width:300px;
+		display:block;
+		margin-bottom:5px;
+	}
+	.textBoxExtra{
+		width:300px;
+		
+		margin-bottom:5px;
+	}
+	.panel{
+		padding:5px;
+
+	}
+	.displayNone{
+		display:none;
+	}
+	.panelFloatRight{
+		float:right;
+	}
+	.clearBoth{
+		clear:both;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:Label ui:field="lblAddress" styleName="{cssGlobal.fieldLabel}">Address:</g:Label>
+	
+				<g:HTMLPanel>
+					<g:HTMLPanel>
+						<!-- this will float right -->
+						<g:HTMLPanel styleName="{style.panelFloatRight}">
+							<g:Button  ui:field="btnUpdateLines" >Update</g:Button>
+							<g:InlineLabel ui:field="lblUpdateLines"></g:InlineLabel>
+						</g:HTMLPanel>
+						<!--  this will contain lines -->
+						<g:HTMLPanel  ui:field="linesPanel"/>
+						<g:HTML styleName="{style.clearBoth}"/>
+					</g:HTMLPanel>
+					<g:HTMLPanel styleName="{style.panel}">
+						<g:Button  ui:field="btnAddLine" >Add Line</g:Button>
+					</g:HTMLPanel>
+				</g:HTMLPanel>
+				<g:HTMLPanel>
+					<g:HTMLPanel styleName="{style.panelFloatRight}">
+						<g:Button  ui:field="btnUpdateCity" >Update</g:Button>
+						<g:InlineLabel ui:field="lblUpdateCity"></g:InlineLabel>
+					</g:HTMLPanel>
+					<g:Label ui:field="lblCityAddress1">City:</g:Label>
+					<g:TextBox ui:field="tbCity" styleName="{style.textBox}"/>
+					<g:HTML styleName="{style.clearBoth}"/>
+				</g:HTMLPanel>
+				<g:HTMLPanel>
+					<g:HTMLPanel styleName="{style.panelFloatRight}">
+						<g:Button  ui:field="btnUpdateState" >Update</g:Button>
+						<g:InlineLabel ui:field="lblUpdateState"></g:InlineLabel>
+					</g:HTMLPanel>
+					<g:Label>State:</g:Label>
+					<g:TextBox ui:field="tbState" styleName="{style.textBox}"/>
+					<g:HTML styleName="{style.clearBoth}"/>
+				</g:HTMLPanel>
+				<g:HTMLPanel>
+					<g:HTMLPanel styleName="{style.panelFloatRight}">
+						<g:Button  ui:field="btnUpdateCountry" >Update</g:Button>
+						<g:InlineLabel ui:field="lblUpdateCountry"></g:InlineLabel>
+					</g:HTMLPanel>
+					<g:Label>Country:</g:Label>
+					<g:TextBox ui:field="tbCountry" styleName="{style.textBox}"/>
+					<g:HTML styleName="{style.clearBoth}"/>
+				</g:HTMLPanel>
+				<g:HTMLPanel ui:field="panelRemoveButton" styleName="{style.panel}">
+					<g:Button  ui:field="btnRemove" >Remove</g:Button>
+					<g:Button  ui:field="btnUpdateAll" >Update All</g:Button>
+				</g:HTMLPanel>
+				
+	</g:HTMLPanel>
+</ui:UiBinder> 

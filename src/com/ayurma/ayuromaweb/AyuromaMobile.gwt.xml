@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.7.0//EN" "http://google-web-toolkit.googlecode.com/svn/tags/2.7.0/distro-source/core/src/gwt-module.dtd">
+<module rename-to='mobile'>
+	<inherits name="com.google.gwt.user.User" />
+	<inherits name='com.google.gwt.user.theme.clean.Clean' />
+	 <inherits name="com.googlecode.mgwt.MGWT" />
+	 <!-- <inherits name="com.googlecode.mgwt.ui.client.theme.platform.Platform" /> -->
+	 <inherits name="com.google.gwt.inject.Inject"/>
+  <inherits name="com.googlecode.mgwt.linker.Linker" />
+  <!--  for validation of the forms -->
+<inherits name="org.hibernate.validator.HibernateValidator" />
+<replace-with
+  class="com.ayurma.ayuromaweb.shared.validation.AyuromaValidatorFactory">
+  <when-type-is class="javax.validation.ValidatorFactory" />
+</replace-with>
+  <inherits name="com.google.gwt.logging.Logging"/>
+   <set-property name="user.agent" value="safari" />
+	<source path="client" />
+	<source path='shared' />
+	<set-property name="gwt.logging.logLevel" value="INFO"/>          
+  <set-property name="gwt.logging.enabled" value="TRUE"/>            
+  <!-- <set-property name="gwt.logging.popupHandler" value="DISABLED" /> -->
+  <!--  turn off the runtime error on firefox or IE since we specify useragent to be safari
+    The error looks like: ERROR: Possible problem with your *.gwt.xml module file. 
+    The compile time user.agent value (gecko1_8) does not match the runtime user.agent value (safari).
+    see link here: http://blog.philbit.com/2011/05/gwt-tips-and-tricks.html -->
+    <set-configuration-property name="user.agent.runtimeWarning" value="false" />
+	<entry-point class="com.ayurma.ayuromaweb.client.AyuromaMobile"></entry-point>
+	 <!-- allow Super Dev Mode -->
+  <add-linker name="xsiframe"/>
+</module>

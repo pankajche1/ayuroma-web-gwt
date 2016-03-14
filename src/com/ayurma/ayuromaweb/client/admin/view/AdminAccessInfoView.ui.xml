@@ -1,0 +1,41 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style field='cssGlobal' src='./resource/css/adminCssGlobal.css'/>
+	<ui:style>
+		.heading2{
+    		font-size:14pt;
+    		font-weight:bold;
+    		padding:5px;
+		}
+		.warning{
+    		font-size:12pt;
+    		color:#f00;
+    		padding:5px;
+			margin:5px;
+		}
+		.section{
+			border:1px solid #ccc;
+			padding:5px;
+			margin:5px;
+		}
+		.email{
+    		font-size:12pt;
+    		font-weight:bold;
+    		padding:5px;
+			color:#595;			
+		}
+
+	</ui:style>
+	<g:HTMLPanel>
+	    <g:Label styleName="{cssGlobal.sectionHeading}">Registered User</g:Label>
+	    <g:HTMLPanel styleName="{style.section}">
+	        <g:Label ui:field='lblEmail' styleName="{style.email}"></g:Label>
+	    	<g:Label styleName="{style.heading2}">You are a registered user with the Ayuroma Web</g:Label>
+	    	<g:Label styleName="{style.warning}">Though you have been included in the Ayuroma administration group, but
+	    	    the administrator has not given you administration group privilage. Please contact the
+	    	    administrator to grant you that. Then log in again with the same email id.</g:Label>
+	    </g:HTMLPanel>
+	     
+	</g:HTMLPanel>
+</ui:UiBinder> 

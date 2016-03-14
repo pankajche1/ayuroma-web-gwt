@@ -1,0 +1,16 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style field='cssGlobal' src='./resource/css/adminCssGlobal.css'/>
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel>
+	    <g:Label ui:field='lblSectionHead' styleName='{cssGlobal.sectionHeading}'>Users</g:Label>
+	    <g:Label ui:field='lblMessage'></g:Label>
+	    <g:HTMLPanel ui:field='dataPanel'>
+	        
+	        
+	    </g:HTMLPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

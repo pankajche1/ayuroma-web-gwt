@@ -1,0 +1,46 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style type='com.ayurma.ayuromaweb.client.admin.view.SliderImageUnitImpl.MyCss'>
+		.rootPanel{
+		margin:10px;
+	     padding:5px;
+	    
+	     margin-bottom:5px;
+	     display:inline-block;
+	    
+	   }
+	   .btnPanel{
+	       padding:5px;
+	  }
+	  .imageInfo{
+	       padding:2px;
+	       text-align:center;
+	
+	  }
+	  .selection{
+		border:1px solid #0f0;
+
+      }
+	  .normal{
+		
+		border:1px solid #ccc;
+     }
+	</ui:style>
+	<g:FocusPanel ui:field='hasClickHandlerPanel' styleName='{style.rootPanel} {style.normal}'>
+		<g:HTMLPanel ui:field='rootPanel' >
+	
+			<g:HTMLPanel>
+				<g:HTMLPanel ui:field='imagePanel'></g:HTMLPanel>
+				<g:Label ui:field="lblImageInfo" styleName='{style.imageInfo}'></g:Label>
+	
+				<g:HTMLPanel ui:field='bottomBtnsPanel' styleName='{style.btnPanel}'>
+	    			<g:CheckBox ui:field='chkSelect'></g:CheckBox>
+					<!-- <g:Button ui:field='btnCopy'>Copy</g:Button> -->
+					<g:Button ui:field='btnDelete'>Delete</g:Button>
+				</g:HTMLPanel>
+			</g:HTMLPanel>
+	
+		</g:HTMLPanel>
+	</g:FocusPanel>
+</ui:UiBinder> 

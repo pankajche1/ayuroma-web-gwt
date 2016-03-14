@@ -1,0 +1,20 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.rootPanel{
+			width:150px;
+			height:150px;
+			
+			padding:5px;
+border-right:1px solid #ccc;
+border-bottom:1px solid #ccc;
+        }
+	</ui:style>
+	<g:HTMLPanel styleName="{style.rootPanel}">
+	    <g:Label>My Interface</g:Label>
+	    <g:Button ui:field='btnEditLink'>Change Link</g:Button>
+	    <g:Button ui:field='btnChangeImage'>Change Image</g:Button>
+	    <g:Button ui:field='btnRemove'>Remove</g:Button>
+	</g:HTMLPanel>
+</ui:UiBinder> 

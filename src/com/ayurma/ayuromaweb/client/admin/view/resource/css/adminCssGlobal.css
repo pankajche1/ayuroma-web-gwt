@@ -1,0 +1,35 @@
+.rootPanel{
+	
+}
+.sectionHeading{
+	border-bottom: 1px solid rgb(51, 102, 204);
+	font-size:16pt;
+    font-weight:bold;
+    padding:5px;
+}
+/* the labels for data fields on a form etc */
+.fieldLabel{
+	font-size:12pt;
+    font-weight:bold;
+    padding:2px;	
+    color:#555;
+}
+.heading1{
+    font-size:16pt;
+    font-weight:bold;
+    padding:5px;
+}
+.heading2{
+	font-size:14pt;
+	font-weight:bold;
+	padding:5px;
+}
+.mainContent{
+	margin-left:210px;
+	border-left:2px solid #ccc;
+	padding:5px;
+}
+.leftBar{
+	float:left;
+	width:200px;
+}

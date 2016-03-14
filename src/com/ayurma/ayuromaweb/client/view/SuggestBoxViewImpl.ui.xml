@@ -1,0 +1,99 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+<ui:style field='cssRes' type='com.ayurma.ayuromaweb.client.view.SuggestBoxViewImpl.Style'>
+    .rootPanel{
+        /* float:right;*/
+        width:370px;
+        border:1px solid #ccc;
+        border-radius:10px;
+        height:50px;
+        line-height:50px;
+        padding:0px 5px;
+        /*  margin-top:10px;
+        margin-right:10px;*/
+        /* for the gradient */
+        background: -moz-linear-gradient(top, #fff, #eee);
+       /* z-index:600;*/
+        position:relative;
+    }
+    .suggestboxPanel {
+        /*float: left;*/
+        display:inline-block;
+        vertical-align:middle;
+    }
+    .ajaxAnimPanel {
+	   /* this is the size of the lense image */
+        width: 34px;
+        height: 34px;
+        line-height:34px;
+      /*  padding: 5px 4px;*/
+        /*background-color: rgb(255, 255, 255);*/
+        /*float: left;*/
+    /*   border-top: 1px solid rgb(153, 153, 153);
+        border-bottom: 1px solid rgb(204, 204, 204);
+        border-right: 1px solid rgb(204, 204, 204);
+        border-left-width: 0px !important;
+        margin-right:3px;*/
+        display:inline-block;  
+        vertical-align:middle;
+    }
+    .ajaxImage{
+	   vertical-align:middle;
+	}
+.suggestBox {
+    height:22px;
+    width:250px;
+    vertical-align:middle;
+   /* padding: 5px 4px;
+    border-right: 0 !important;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(153, 153, 153) rgb(204, 204, 204) rgb(204, 204, 204);
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;*/
+    font-size: 100%;
+    font-family: Arial Unicode MS,Arial,sans-serif;
+}
+.twitterStyleTextbox {
+    border: 1px solid #c4c4c4;
+    width: 250px;
+    height: 22px;
+     vertical-align:middle;
+   /* font-size: 13px;*/
+  /*  padding: 4px 4px 4px 4px;*/
+  padding-left:4px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    box-shadow: 0px 0px 8px #d9d9d9;
+    -moz-box-shadow: 0px 0px 8px #d9d9d9;
+    -webkit-box-shadow: 0px 0px 8px #d9d9d9;
+    
+}
+
+.twitterStyleTextbox:focus {
+    outline: none;
+    border: 1px solid #7bc1f7;
+    box-shadow: 0px 0px 8px #7bc1f7;
+    -moz-box-shadow: 0px 0px 8px #7bc1f7;
+    -webkit-box-shadow: 0px 0px 8px #7bc1f7;
+}
+/*
+.suggestBox .gwt-SuggestBoxPopup {
+	z-index:800;
+	}
+
+*/
+        
+    </ui:style>
+    <g:HTMLPanel ui:field="searchBoxPanel" styleName='{cssRes.rootPanel}'>
+        <g:HTMLPanel ui:field="ajaxAnimPanel"  styleName="{cssRes.ajaxAnimPanel}"/>
+        <g:HTMLPanel ui:field="suggestboxPanel" styleName='{cssRes.suggestboxPanel}'/>
+        
+        <g:Button ui:field="btnSearch">Search</g:Button>
+    </g:HTMLPanel>
+</ui:UiBinder> 

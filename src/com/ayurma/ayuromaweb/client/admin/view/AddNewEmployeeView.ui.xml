@@ -1,0 +1,53 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:pwt="urn:import:com.ayurma.ayuromaweb.client.admin.view.widgets"
+	>
+	<ui:style field='cssGlobal' src='./resource/css/adminCssGlobal.css'/>
+	<ui:style>
+	.rootPanel{
+	
+	
+	
+margin-top:10px;
+margin-left:10px;
+	
+}
+.lbl{
+	
+	margin-top:5px;
+	
+}
+.textBox{
+	width:300px;
+}
+
+.txtImageUrl{
+	width:300px;
+	background-color:#eee;
+	border:1px solid gold;
+}
+.btnPanel{
+	padding:5px;
+}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:Label styleName="{cssGlobal.sectionHeading}">New Employee</g:Label>
+	    <g:HTMLPanel styleName="{style.rootPanel}" ui:field="rootPanel">
+			<g:Label styleName="{cssGlobal.fieldLabel}">Name:</g:Label>
+			<g:TextBox ui:field="txtName" styleName="{style.textBox}"></g:TextBox>
+			<g:Label styleName="{cssGlobal.fieldLabel}">Designation:</g:Label>
+			<g:TextBox ui:field="txtDesignation" styleName="{style.textBox}"></g:TextBox>
+			<pwt:AddTextBoxWidget ui:field="mobilesWidget" buttonText="Add Mobile" labelText="Mobiles:"/>
+			<pwt:AddTextBoxWidget ui:field="phonesWidget" buttonText="Add Phone" labelText="Phones:"/>
+			<pwt:AddTextBoxWidget ui:field="emailsWidget" buttonText="Add Email" labelText="Emails:"/>
+			<pwt:AddressesPanel ui:field="addressesPanel"/>
+			
+			<g:HTMLPanel styleName='{style.btnPanel}'>
+				<g:Button  ui:field="btnAdd" >Add</g:Button>
+				<g:Button  ui:field="btnReset" >Reset</g:Button>
+				<g:InlineLabel ui:field="lblMessage"></g:InlineLabel>
+			</g:HTMLPanel>
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

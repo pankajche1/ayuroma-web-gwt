@@ -1,0 +1,39 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:pwt="urn:import:com.ayurma.ayuromaweb.client.admin.view.widgets">
+	<ui:style field='cssGlobal' src='../resource/css/adminCssGlobal.css'/>
+	<ui:style>
+	.textBox{
+		width:300px;
+		display:block;
+		margin-bottom:5px;
+	}
+	.textBoxExtra{
+		width:300px;
+		
+		margin-bottom:5px;
+	}
+	.panel{
+		padding:5px;
+
+	}
+	
+	</ui:style>
+	<g:HTMLPanel ui:field="rootPanel">
+		<g:Label ui:field="lblLabel" styleName="{cssGlobal.fieldLabel}">Addresses:</g:Label>
+		<g:HTMLPanel ui:field="addressesPanel">
+			<!-- default address panel -->
+			<pwt:AddressWidget ui:field="addressWidget1"/>
+			<!--  extra address panels will come here -->
+		</g:HTMLPanel>
+		
+		
+		
+		
+		<g:HTMLPanel styleName="{style.panel}">
+			<g:Button  ui:field="btnAddAddressPanel" >Add Address</g:Button>
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

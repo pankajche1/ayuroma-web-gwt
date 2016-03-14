@@ -1,0 +1,30 @@
+
+/*product view mobile*/
+.productDescription{
+	padding:5px;
+}
+.productImageBox{
+	text-align:center;
+	/*border:1px solid #ddd;*/
+	padding:5px;
+	min-height:100px;
+	
+}
+.productImage{
+	
+	border:1px solid #ddd;
+	max-width:90%;
+	padding:5px;
+}
+.buttonEnquiry{
+	border:1px solid green;
+	padding:5px;
+	background-color:green;
+	color:#eee;
+	font-weight:bold;
+	text-align:center;
+
+}
+.spacer{
+	height:5px;
+}

@@ -1,0 +1,18 @@
+.rootPanel{
+	
+	background-color:#f00;
+}
+.global{
+	background-color:#eee;
+	/*font-weight:bold;*/
+	color:#111;
+	
+	
+}
+@sprite .logo{
+	overflow:visible;
+	gwt-image:"logo";
+	width:20px;
+	
+	
+}

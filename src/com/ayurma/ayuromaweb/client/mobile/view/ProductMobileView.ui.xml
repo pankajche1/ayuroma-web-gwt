@@ -1,0 +1,102 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:mgwt="urn:import:com.googlecode.mgwt.ui.client.widget"
+	xmlns:pwt="urn:import:com.ayurma.ayuromaweb.client.mobile.view.header"
+	>
+	<ui:with field='res' 
+    	type='com.ayurma.ayuromaweb.client.mobile.view.resource.MainClientBundleMobile'>
+	</ui:with>
+	<ui:style>
+	.productName{
+                font-family: arial, sans-serif;
+                 font-size: 16pt;
+                color: #228B22;
+                font-weight:bold;
+                /*margin-bottom:10px;*/
+                text-align:center;
+                padding:10px;
+                border-bottom:1px solid #228B22;
+    }
+	.productBody{
+	  padding:5px;
+	   font-size: 12pt;
+	   line-height:1.2em;
+	  
+	  
+	}
+	.progressIndicatorContainer{
+	
+	}
+	.progressIndicator{
+		/*display:inline-block;
+		vertical-align:top;*/
+		margin: 10px auto;
+	}
+	.contentPanel{
+	
+		min-height:600px;
+	}
+	.button{
+	
+		/*color: #454545;*/
+		color:#eee;
+		/* display: inline-block; */
+		position: relative;
+		padding: 10px;
+		margin: 5px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		font-size: 16px;
+		/*background-color: #e5e9e8;*/
+		background-color: #228B22;
+		/*border: 1px solid #9daca9;*/
+		border-radius: 6px;
+		text-align: center;
+		cursor: pointer;
+
+	
+	}
+	</ui:style>
+	<mgwt:panel.flex.RootFlexPanel ui:field='rootPanel'>
+		<!-- <g:HTMLPanel addStyleNames="{res.productStyle.productImageBox}"></g:HTMLPanel> -->
+     	<pwt:HeaderMobileView ui:field='headerView'/>  
+     	<!--<g:ScrollPanel ui:field="scrollPanel">
+        -->
+     	<mgwt:panel.scroll.ScrollPanel ui:field="scrollPanel" scrollingEnabledX='false'>
+        	<mgwt:panel.Panel ui:field="container">
+        		<g:HTMLPanel>
+        		
+         	  		<g:HTMLPanel styleName='{style.progressIndicatorContainer}'>
+          				<mgwt:progress.ProgressIndicator  ui:field="progressIndicator" visible="true"
+          			      addStyleNames='{style.progressIndicator}'/>
+          			</g:HTMLPanel>
+          			
+          			 
+         	 		<g:HTMLPanel ui:field='contentPanel' visible='false' styleName='{style.contentPanel}'>
+         	 			
+						<g:Label ui:field='lblProductName' styleName='{style.productName}'/>
+						<g:HTMLPanel ui:field='imagePanel' />
+						<g:HTMLPanel ui:field='descriptionPanel' />
+						<g:HTMLPanel ui:field='productBody' styleName='{style.productBody}'/>
+						
+						<g:HTMLPanel ui:field='btnsPanel' > 
+				
+							<mgwt:button.Button ui:field='btnSendEnquiry' styleName='{style.button}'>Enquiry</mgwt:button.Button>
+							<mgwt:button.Button ui:field='btnGetReports' styleName='{style.button}'>Get Reports</mgwt:button.Button>
+							<mgwt:button.Button ui:field='btnShowDetails' styleName='{style.button}'>Details</mgwt:button.Button>
+						</g:HTMLPanel>
+					</g:HTMLPanel>
+					 
+					
+				</g:HTMLPanel>
+          
+        	</mgwt:panel.Panel> 
+       
+     
+     	</mgwt:panel.scroll.ScrollPanel>
+   
+   		<!-- </g:ScrollPanel> -->
+    </mgwt:panel.flex.RootFlexPanel>
+</ui:UiBinder> 

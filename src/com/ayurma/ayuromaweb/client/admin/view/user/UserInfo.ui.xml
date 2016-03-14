@@ -1,0 +1,47 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.name{
+			padding:5px;
+		}
+		.email{
+			padding:5px;
+			font-weight:bold;
+		}
+		.rootPanel{
+			padding:10px;
+			background-color:#eef;
+			margin-bottom:5px;
+			margin-top:5px;
+		}
+		.userInfo{
+			padding:5px;
+		}
+		.accessDataPanel{
+
+			padding:10px;
+			border:1px solid #ccc;
+			margin-bottom:10px;
+		}
+	</ui:style>
+	<g:HTMLPanel  styleName="{style.rootPanel}">
+	    <g:HTMLPanel styleName="{style.userInfo}">
+	        <g:InlineLabel ui:field='lblUserEmail' styleName="{style.email}"></g:InlineLabel>
+	    	<g:InlineLabel ui:field='lblUserName' styleName="{style.name}"></g:InlineLabel>
+	    	<g:ListBox ui:field='lbUserLevel'>
+	           	
+	            
+	        </g:ListBox>
+	    	
+	    </g:HTMLPanel>
+	    <g:HTMLPanel>
+	        <g:HTMLPanel ui:field='accessDataPanel' styleName="{style.accessDataPanel}">
+
+	        </g:HTMLPanel>
+	        <g:Button ui:field='btnUpdateUser'>Register User</g:Button>
+	        <g:Button ui:field='btnDeleteUser'>Delete User</g:Button>
+	        <g:InlineLabel ui:field='lblMessage'></g:InlineLabel>
+	    </g:HTMLPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

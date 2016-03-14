@@ -1,0 +1,63 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style type='com.ayurma.ayuromaweb.client.admin.view.NewSliderViewImpl.MyCss'>
+	.leftPanel{
+	       width:300px;
+	       min-height:300px;
+	       float:left;
+	       border:1px solid #ccc;
+	       padding:5px;
+	
+	   }
+	   .rightPanel{
+	
+	          width:300px;
+           min-height:300px;
+           float:left;
+           border:1px solid #ccc;
+           padding:5px;
+           margin-left:10px;
+	
+	   }
+	.selectedImage{
+		 border:1px solid #0f0;
+   	}
+	.normalImage{
+ 		border:1px solid #ccc;
+    }
+	   .clearBoth{
+	       clear:both;
+	}		
+	</ui:style>
+	<g:HTMLPanel>
+		<g:Label>New Film Creation</g:Label>
+
+	<g:HTMLPanel>
+    <g:Label ui:field='lblMessage'></g:Label>
+   <!--  <g:TextBox ui:field="txtFilmTitle"></g:TextBox> -->	
+	</g:HTMLPanel>
+	<!-- there will be two panels left and right: -->
+	<!-- left panel If shows the images on the film slide-->
+	<g:HTMLPanel ui:field='leftPanel' styleName="{style.leftPanel}"> 
+	<g:HTMLPanel>
+	    <g:Button ui:field='btnRemoveImage'>Remove Image</g:Button>
+		<g:Button ui:field='btnSaveFilm'>Save Film</g:Button>    
+	</g:HTMLPanel>
+	<g:HTMLPanel ui:field="selectedImagesPanel" />
+	 </g:HTMLPanel>
+	<!-- right panel: it shows the images available on the server -->
+    <g:HTMLPanel ui:field="rightPanel" styleName="{style.rightPanel}"> 
+    	<g:HTMLPanel>
+        <g:Button ui:field='btnShowImagesBrowser'>Images</g:Button>
+        <g:Button ui:field='btnShowProductsBrowser'>Products</g:Button>
+    	</g:HTMLPanel>
+    	<g:SimplePanel ui:field="rightDataPanel" />
+    	    
+    	    
+    	
+    
+     </g:HTMLPanel>	
+     <g:HTML styleName='{style.clearBoth}'></g:HTML>
+	</g:HTMLPanel>
+</ui:UiBinder> 

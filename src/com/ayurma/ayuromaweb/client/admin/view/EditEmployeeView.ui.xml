@@ -1,0 +1,19 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:pwt="urn:import:com.ayurma.ayuromaweb.client.admin.view.widgets">
+	<ui:style field='cssGlobal' src='./resource/css/adminCssGlobal.css'/>
+	<ui:style>
+	
+	</ui:style>
+	<g:HTMLPanel>
+		<g:Label styleName="{cssGlobal.sectionHeading}">Edit Employee Data</g:Label>
+		<g:Label ui:field="lblMainMessage"/>
+		<g:Label styleName="{cssGlobal.fieldLabel}">Name:</g:Label>
+		<g:TextBox ui:field="tbName"/>
+		<g:Label styleName="{cssGlobal.fieldLabel}">Designation:</g:Label>
+		<g:TextBox ui:field="tbDesignation"/>
+		<!-- addresses panel -->
+		<pwt:EditAddressesView ui:field="addressesView"/>
+	</g:HTMLPanel>
+</ui:UiBinder> 

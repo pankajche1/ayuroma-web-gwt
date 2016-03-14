@@ -1,0 +1,56 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style field='cssGlobal' src='../resource/css/adminCssGlobal.css'/>
+	<ui:style type='com.ayurma.ayuromaweb.client.admin.view.widgets.AddressWidget.Style'>
+	.textBox{
+		width:300px;
+		display:block;
+		margin-bottom:5px;
+	}
+	.textBoxExtra{
+		width:300px;
+		
+		margin-bottom:5px;
+	}
+	.panel{
+		padding:5px;
+
+	}
+	.displayNone{
+		display:none;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		
+		
+			
+				<g:Label ui:field="lblAddress">Address:</g:Label>
+				<g:HTMLPanel>
+					<g:HTMLPanel>
+						<g:TextBox ui:field="tbLine1" styleName="{style.textBox}"></g:TextBox>
+						<g:TextBox ui:field="tbLine2" styleName="{style.textBox}"></g:TextBox>
+						<g:TextBox ui:field="tbLine3" styleName="{style.textBox}"></g:TextBox>
+						<g:HTMLPanel  ui:field="extraLinePanel"></g:HTMLPanel>
+					</g:HTMLPanel>
+					<g:HTMLPanel styleName="{style.panel}">
+						<g:Button  ui:field="btnAddLine" >Add Line</g:Button>
+					</g:HTMLPanel>
+				</g:HTMLPanel>
+				<g:Label ui:field="lblCityAddress1">City:</g:Label>
+				<g:TextBox ui:field="tbCity" styleName="{style.textBox}"></g:TextBox>
+				<g:Label>State:</g:Label>
+				<g:TextBox ui:field="tbState" styleName="{style.textBox}"></g:TextBox>
+				<g:Label>Country:</g:Label>
+				<g:TextBox ui:field="tbCountry" styleName="{style.textBox}"></g:TextBox>
+				<g:HTMLPanel ui:field="panelRemoveButton" styleName="{style.panel}" visible='false'>
+					<g:Button  ui:field="btnRemove" >Remove</g:Button>
+				</g:HTMLPanel>
+			
+			
+			
+		
+		
+		
+	</g:HTMLPanel>
+</ui:UiBinder> 

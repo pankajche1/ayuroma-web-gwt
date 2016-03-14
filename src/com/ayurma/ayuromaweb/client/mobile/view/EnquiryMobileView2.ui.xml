@@ -1,0 +1,172 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:mgwt="urn:import:com.googlecode.mgwt.ui.client.widget"
+	xmlns:pwt="urn:import:com.ayurma.ayuromaweb.client.mobile.view">
+	<ui:style>
+	
+	 .rootPanel{
+        padding:10px;
+        font-family:arial;
+     }
+     /* enquiry form heading */
+     .pageHead{
+        font-weight:bold;
+        font-size:16pt;
+        padding:5px 0;
+        color: rgb(60,133,202);
+        margin-bottom:10px;
+    
+     }
+     .heading2{
+	 	font-weight:bold;
+        font-size:14pt;
+        padding:5px 0;
+        color: rgb(60,133,202);
+        margin-bottom:10px;
+	}
+     /* the form */
+     .form{
+        padding:10px;
+     }
+     /* container for labels of the fields */
+       .fieldLabelPanel{
+           margin-bottom:5px;
+           width:400px;
+       }
+        .fieldLabel{
+           font-weight:bold;
+           color:#555;
+           
+       }
+       .fieldValue{
+    /*style taken from gwt-textbox */
+            padding: 5px 4px;
+    border-right: 1px solid rgb(204, 204, 204);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(153, 153, 153) rgb(204, 204, 204) rgb(204, 204, 204);
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    font-size: small;
+    font-family: Arial Unicode MS,Arial,sans-serif;
+    font-weight:bold;
+    color:#555;
+      }
+      .lblOptional{
+           color:#777;
+            font-weight:bold;
+        }
+       .errorMsg{
+            color:#f00;
+        }
+        /* secret code for preventing spam bots*/
+	 .hidden{
+		display:none;
+	}
+	.buttonsPanel{
+		
+	}
+	.progressIndicator{
+		display:inline-block;
+		vertical-align:top;
+	}
+	</ui:style>
+	<mgwt:panel.flex.RootFlexPanel>
+		 <pwt:header.HeaderMobileView ui:field='headerView'/>  
+		 <mgwt:panel.scroll.ScrollPanel ui:field="scrollPanel">
+		 	<g:FlowPanel>
+	<g:HTMLPanel styleName="{style.rootPanel}">
+		<g:Label ui:field='lblHeading' styleName='{style.pageHead}'/>
+		<g:Label ui:field='lblSubject' styleName='{style.heading2}'/>
+		<g:HTMLPanel ui:field='form' styleName="{style.form}">
+				<g:HTMLPanel styleName='{style.fieldLabelPanel}'>   
+             		<g:InlineLabel styleName='{style.fieldLabel}'>Name</g:InlineLabel>
+             		<g:InlineLabel ui:field='lblNameMsg' styleName='{style.errorMsg}'></g:InlineLabel>
+            	</g:HTMLPanel>
+            	<!-- for preventing spam bot the honey pot-->
+          
+            	<g:TextBox ui:field='tbHidden' styleName="{style.hidden}" name='email' />
+            	<mgwt:input.MTextBox ui:field="tbName"/>
+            	<!-- 
+            	<g:TextBox ui:field='tbName' styleName="{style.fieldValue}" width='400px'></g:TextBox>
+             	-->
+            	<g:HTMLPanel styleName='{style.fieldLabelPanel}'>
+            		<g:InlineLabel  styleName='{style.fieldLabel}'>Email:</g:InlineLabel>
+            		<g:InlineLabel ui:field='lblEmailMsg'  styleName='{style.errorMsg}'></g:InlineLabel>
+            	</g:HTMLPanel>
+            	<!--
+            	<g:TextBox ui:field='tbEmail' styleName="{style.fieldValue}" width='400px'></g:TextBox>
+            	-->
+            	<mgwt:input.MEmailTextBox ui:field="tbEmail"/>
+            	
+            	<g:HTMLPanel styleName='{style.fieldLabelPanel}'>
+            		<g:InlineLabel styleName='{style.fieldLabel}'>Company Name:</g:InlineLabel>
+            		<g:InlineLabel ui:field='lblCompanyNameMessage' styleName='{style.errorMsg}'></g:InlineLabel>
+            	</g:HTMLPanel>
+            	<!--
+            	<g:TextBox ui:field='tbCompanyName' styleName="{style.fieldValue}" width='400px'></g:TextBox>
+            	-->
+            	<mgwt:input.MTextBox ui:field="tbCompanyName"/>
+            	
+            
+            	<!-- city name -->
+            	<g:HTMLPanel styleName='{style.fieldLabelPanel}'>
+            		<g:InlineLabel styleName='{style.fieldLabel}'>City:</g:InlineLabel>
+            		<g:InlineLabel ui:field='lblCityMessage' styleName='{style.errorMsg}'></g:InlineLabel>
+            	</g:HTMLPanel>
+            
+            	<!--<g:TextBox ui:field='tbCity' styleName="{style.fieldValue}" width='400px'></g:TextBox>-->
+            	<mgwt:input.MTextBox ui:field="tbCity"/>
+     
+            	<!-- country -->
+            	<g:HTMLPanel styleName='{style.fieldLabelPanel}'>
+            		<g:InlineLabel styleName='{style.fieldLabel}'>Country:</g:InlineLabel>
+            		
+            	</g:HTMLPanel>
+            	<pwt:widgets.CountryNamesMobileView ui:field='listBoxCountries'/> 
+            	
+            	<g:HTMLPanel styleName='{style.fieldLabelPanel}'>
+            		<g:InlineLabel styleName='{style.fieldLabel}'>Telephone:</g:InlineLabel>
+            		<g:InlineLabel ui:field='lblPhoneMessage' styleName='{style.errorMsg}'></g:InlineLabel>
+            	</g:HTMLPanel>
+            	<mgwt:input.MPhoneNumberTextBox ui:field="tbPhone"/>
+            	
+            	<g:HTMLPanel ui:field='productReportsPanel' visible='false'>
+            	    <mgwt:input.checkbox.MCheckBox ui:field="chkCOAReport" value='false'/>
+            	    <mgwt:input.checkbox.MCheckBox ui:field="chkMSDSReport" value='false' />
+            	    <mgwt:input.checkbox.MCheckBox ui:field="chkGCMSReport" value='false'/>
+            	</g:HTMLPanel>
+            	
+            	<g:HTMLPanel ui:field='messageTextAreaPanel' visible='false'>
+            
+            		<g:HTMLPanel styleName='{style.fieldLabelPanel}'>
+            			<g:InlineLabel styleName='{style.fieldLabel}'>Message:</g:InlineLabel>
+            			<g:InlineLabel ui:field='lblMessageMsg' styleName='{style.errorMsg}'/>
+           			</g:HTMLPanel>
+            
+            		<g:TextArea ui:field='taMessage'  width='400px' height='150px'/>
+            
+           		</g:HTMLPanel>
+           		
+           		<g:HTMLPanel ui:field="sidePanel" styleName='{style.buttonsPanel}'>
+          			<mgwt:button.Button text="Reset" ui:field="btnReset"/>
+          			<mgwt:button.Button text="Send" ui:field="btnSend"/>
+          			<g:HTMLPanel styleName='{style.progressIndicator}'>
+          				<mgwt:progress.ProgressIndicator  ui:field="progressIndicator" visible="false"/>
+          			</g:HTMLPanel>
+          		</g:HTMLPanel><!--  buttons panel -->
+            	
+            	
+            	
+            	
+		 </g:HTMLPanel><!--  form -->
+		 
+	</g:HTMLPanel><!--  root panel -->
+	</g:FlowPanel>
+	</mgwt:panel.scroll.ScrollPanel>
+	</mgwt:panel.flex.RootFlexPanel>
+</ui:UiBinder> 

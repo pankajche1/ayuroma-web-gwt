@@ -1,0 +1,87 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:mgwt="urn:import:com.googlecode.mgwt.ui.client.widget">
+	<ui:with field='resource' type='com.ayurma.ayuromaweb.client.view.resource.header.HeaderClientBundle' ></ui:with>
+	<ui:with field='res' 
+    	type='com.ayurma.ayuromaweb.client.mobile.view.resource.MainClientBundleMobile'>
+	</ui:with>
+	<ui:style>
+	.headerPanel{
+       
+      
+        background-color: #eee ;
+        /*background: -moz-linear-gradient(top, #555, #222) !important;*/  
+        
+        border-bottom: 1px solid #ccc ;
+        border-top:4px solid rgb(51, 102, 153) ;
+	height:40px;
+       
+        /*box-shadow:0px 3px 5px 0px #000 !important;*/
+       
+        
+        
+	 }
+	 .leftWidget{
+		 float:left;
+	/*
+	 position:relative;
+	 top:17px;
+	 */
+	}
+	.logoSpace{
+		float:left;
+		 margin:2px 0 0 2px;
+	}	
+	.companyName{
+	   font-family:Georgia,Utopia,'Palatino Linotype',Palatino,serif;
+	   font-size:16pt;
+	   letter-spacing:0.1em;
+	   color:#666;
+	   /*float:right;*/
+	   border-bottom: 1px solid #ccc;
+	   /*position:relative;
+	   left:40px;
+	   top:-35px;*/
+	   text-shadow:1px 2px 3px rgba(0, 0, 0, 0.2);	
+	   margin:0 0 0 40px;
+	}
+	.leftWidget p{
+	   font-family:arial;
+	   font-size:8pt;
+	   letter-spacing:0.2em;
+	   color:rgb(51, 102, 153);
+	   margin:0 0 0 40px;
+
+	}
+	.clear{
+		clear:both;
+	}
+		
+	</ui:style>
+	<!--  Pankaj Note: 28May 2015 this ui binder uses gwt htmlPanel as its root panel
+	and is for testing the header problem in mgwt  -->
+	<g:HTMLPanel addStyleNames="{style.headerPanel}">
+	<!-- 
+	<g:Image resource='{resource.logo3}' width='35px' height='35px' styleName="{style.logoImage}"/>
+		 -->
+		<g:HTMLPanel styleName="{style.leftWidget}">
+			<div class="{style.logoSpace}">
+				<g:Image resource='{resource.logo3}' width='35px' height='35px'></g:Image>
+			</div>
+			<h1 class="{style.companyName}">Ayuroma Centre</h1>
+	       		<p>Natural flavours and fragrances</p>
+		</g:HTMLPanel>
+		<g:HTML styleName="{style.clear}"></g:HTML>
+		 
+     	
+     	<!-- 
+     	<mgwt:header.HeaderTitle text="No Label" ui:field="headerTitle" addStyleNames="{style.companyTitle}"/>
+     	
+     	 -->
+     	
+     	
+     	
+     	
+	</g:HTMLPanel>
+</ui:UiBinder> 

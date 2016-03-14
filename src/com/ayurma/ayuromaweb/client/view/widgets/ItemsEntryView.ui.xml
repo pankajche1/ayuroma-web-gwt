@@ -1,0 +1,55 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style type='com.ayurma.ayuromaweb.client.view.widgets.ItemsEntryView.MyCss'>
+	   /* the panel containing the 4 product catagory items */
+	   .productCatPanel{
+	       text-align:center;
+	       padding:5px;
+	
+	  }
+	   .productCatLink{
+			cursor:hand;
+ 			cursor:pointer;
+	       width:210px;
+	       height:245px;
+	       border:1px solid #ccc;
+	       border-radius:5px;
+	       display:inline-block;
+	       margin:5px;
+	       /*
+	       -moz-box-shadow:2px 2px 2px rgba(0,0,0,.75); 
+           -webkit-box-shadow:2px 2px 2px rgba(0,0,0,.75); 
+           box-shadow:2px 2px 2px rgba(0,0,0,.75); */
+           padding:10px;
+	       vertical-align:top;
+	   }
+	   .productCatLink img{
+	       width:180px;
+	       height:100px;
+	   }
+	   a.productCatLink{
+	       text-decoration:none;
+	       color:#111;
+	   }
+	   a.productCatLink:hover{
+           text-decoration:none;
+           color:#555;
+       }
+	   .productCatLink h1{
+	       margin:5px 0;
+	       font-size:12pt;
+	       font-weight:bold;
+	       text-align:left;
+	       border-bottom:1px dotted #050;
+	       
+	   }
+	   .productCatLink p{
+          text-align:left;
+           margin:0;
+       }		
+	</ui:style>
+	<g:HTMLPanel ui:field='rootPanel'>
+	    
+	</g:HTMLPanel>
+</ui:UiBinder> 

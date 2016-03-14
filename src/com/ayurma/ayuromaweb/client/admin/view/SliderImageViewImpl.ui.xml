@@ -1,0 +1,59 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style field='cssGlobal' src='./resource/css/adminCssGlobal.css'/>
+	<ui:style>
+		.rootPanel{
+			
+			padding:5px;
+		}
+		.btnPanel{
+	       padding:5px;
+	       margin-top:5px;
+	       border:1px solid #ccc;
+	       
+	    }
+		.dataPanel{
+			min-height:400px;
+   		}
+	    .head{
+           font-size:12pt;
+           font-weight:bold;
+           padding:2px;
+           border-bottom:1px solid #ccc;
+        }
+        .message{
+           font-size:12pt;
+           font-weight:bold;	
+           padding:2px;
+           
+	
+	}
+.floatRight{
+float:right;
+}
+	</ui:style>
+	<g:HTMLPanel styleName="{style.rootPanel}">
+		<g:Label  styleName="{cssGlobal.sectionHeading}">Slider Images</g:Label>
+		<g:HTMLPanel ui:field="btnPanel" styleName="{style.btnPanel}">
+       		<g:InlineLabel>Page Number:</g:InlineLabel>
+       		<g:TextBox ui:field="txtNumPage" width='20px'>1</g:TextBox>
+       		<g:InlineLabel>Items per page:</g:InlineLabel>
+       		<g:TextBox ui:field="txtItemsPerPage" width='20px'>10</g:TextBox>
+       		<g:Button ui:field="btnLoadImages">Show</g:Button>
+       		<g:Button ui:field="btnClearCacheImages" addStyleNames="{style.floatRight}">Clear cache</g:Button>
+        	<g:InlineLabel ui:field='lblMessage' styleName="{style.message}"></g:InlineLabel>
+      
+    	</g:HTMLPanel>
+    	<g:HTMLPanel ui:field='exportButtonPanel' visible='false'>
+        	<g:Button ui:field='btnExportImages'>Export Images</g:Button>
+    	</g:HTMLPanel>
+   
+    	<g:HTMLPanel ui:field='dataPanel'></g:HTMLPanel>
+    	
+    	<g:HTMLPanel ui:field='bottomBtnsPanel'>
+        	<g:Button ui:field='btnCancelBrowser'>Cancel</g:Button>
+        	<g:Button ui:field='btnTakeImage'>Ok</g:Button>
+    	</g:HTMLPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

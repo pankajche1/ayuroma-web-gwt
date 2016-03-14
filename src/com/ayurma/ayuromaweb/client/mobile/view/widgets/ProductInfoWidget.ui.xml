@@ -1,0 +1,33 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:mgwt="urn:import:com.googlecode.mgwt.ui.client.widget">
+	<ui:style>
+	.productName{
+                font-family: arial, sans-serif;
+                 font-size: 16pt;
+                color: #228B22;
+                font-weight:bold;
+                /*margin-bottom:10px;*/
+                text-align:center;
+                padding:10px;
+                border-bottom:1px solid #228B22;
+    }
+	.productBody{
+	  font-family: Arial,sans-serif;
+	  padding:5px;
+	   font-size: 12pt;
+	   line-height:1.2em;
+	  
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:Label ui:field='lblProductName' styleName='{style.productName}'></g:Label>
+		<g:HTML ui:field='productBody' styleName='{style.productBody}'></g:HTML>
+		<g:HTMLPanel ui:field='btnsPanel' > 
+			<mgwt:button.Button ui:field='btnSendEnquiry'>Enquiry</mgwt:button.Button>
+			<mgwt:button.Button ui:field='btnGetReports'>Get Reports</mgwt:button.Button>
+			<mgwt:button.Button ui:field='btnShowDetails'>Details</mgwt:button.Button>
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

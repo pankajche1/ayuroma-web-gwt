@@ -1,0 +1,31 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.rootPanel{
+			width:100%;
+			
+		}
+		.head{
+			font-family:Georgia,Utopia,"Palatino Linotype",Palatino,serif;
+			text-shadow:1px 2px 3px rgba(0, 0, 0, 0.2);
+			font-size:30pt;
+			color:#eee;
+			text-align:center;
+			margin:10px auto 5px auto;
+		}
+		.imagePanel{
+			margin:0px auto;
+			text-align:center;
+			padding-top:50px;
+
+		}
+	</ui:style>
+	<g:HTMLPanel styleName='{style.rootPanel}'>
+	    
+	  	<g:HTMLPanel styleName="{style.imagePanel}">
+	    <g:Image ui:field='image'></g:Image>
+	   	</g:HTMLPanel>
+	    <g:Label styleName="{style.head}">Ayuroma Web</g:Label>
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,19 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:mgwt="urn:import:com.googlecode.mgwt.ui.client.widget">
+	<ui:style>
+	.progressIndicatorContainer{
+	
+	}
+	.progressIndicator{
+		/*display:inline-block;
+		vertical-align:top;*/
+		margin: 10px auto;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+	<mgwt:progress.ProgressIndicator  ui:field="progressIndicator" visible="true"
+          			      addStyleNames='{style.progressIndicator}'/>
+	</g:HTMLPanel>
+</ui:UiBinder> 
